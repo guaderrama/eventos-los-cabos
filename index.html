@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="page-title">Eventos Los Cabos</title>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       ██████  DATOS DE LA SEMANA — SOLO CAMBIA ESTE BLOQUE CADA SEMANA
+       ═══════════════════════════════════════════════════════════════════ -->
+  <script>
+  const WEEKLY_DATA = {
+
+    /* ── META ── */
+    weekLabel:     "Semana 12–18 Abril 2026",
+    weekDates:     "12 – 18 de Abril, 2026",
+    generatedDate: "12 de Abril, 2026",
+
+    /* ══════════════════════════════════════════════════════════════════
+       SECCIÓN 1: EVENTOS ESPECIALES ESTA SEMANA
+       Cosas únicas, que no se repiten. Máximo 6-8.
+       priority: 1=imperdible, 2=recomendado, 3=opcional
+    ══════════════════════════════════════════════════════════════════ */
+    specials: [
+      {
+        priority: 1,
+        date: "Sábado 18 · 12:00 PM",
+        icon: "🦪",
+        title: "Festival del Ostión 2026 — 3ª Edición",
+        venue: "Veleros Beach Club",
+        why: "El festival gastronómico más esperado del año en Los Cabos. Ostiones frescos, música en vivo y ambiente de playa. Afterparty oficial en Crania a las 9 PM con Soul of Hex.",
+        tags: [["especial","Festival"],["brunch","Beach Club"],["","Mariscos"]],
+        url: "https://www.cabo.party/event/festival-del-ostion-2026-veleros-los-cabos-18-april-2026"
+      },
+      {
+        priority: 1,
+        date: "Miércoles 15 · 7:00 PM",
+        icon: "🎹",
+        title: "PIANOFEST — Live Piano Night",
+        venue: "Crania Los Cabos",
+        why: "Evento único de música en vivo con piano. Crania tiene de los mejores ambientes de Los Cabos — no es la noche típica de club.",
+        tags: [["especial","Evento único"],["cultura","Música en Vivo"]],
+        url: "https://www.cabo.party/event/pianofest-crania-los-cabos-15-april-2026"
+      },
+      {
+        priority: 2,
+        date: "Martes 14 · 12:00 PM",
+        icon: "⛵",
+        title: "Hip Hop Sessions — Boat Party",
+        venue: "Cabo Escape Tours",
+        why: "Fiesta en barco por la bahía con música hip hop en vivo. Experiencia diferente si no lo han hecho.",
+        tags: [["nightlife","Fiesta en barco"],["","Hip Hop"]],
+        url: "https://www.eventbrite.com/e/hip-hop-sessions-boat-party-cabo-san-lucas-tickets-136202203457"
+      },
+      {
+        priority: 2,
+        date: "Miércoles 15 · 7:00 PM",
+        icon: "🎤",
+        title: "Daline Jones & The Diego Ramírez Trio",
+        venue: "Jazz on the Rocks",
+        why: "Jazz en vivo con artista invitada. Jazz on the Rocks es siempre buen plan — pero con artista especial es mejor.",
+        tags: [["cultura","Jazz en Vivo"],["","Música"]],
+        url: "https://www.visitloscabos.travel/event/daline-jones-%26-the-diego-ram%c3%8drez-trio/1943/"
+      },
+      {
+        priority: 2,
+        date: "Viernes 17 · Noche",
+        icon: "💔",
+        title: "Corazón Despecha'o — Noche Temática",
+        venue: "Corazón Beach Club",
+        why: "Noche de música latina despechada. Diferente al nightlife típico — buen plan si quieren algo más animado y divertido.",
+        tags: [["nightlife","Noche Temática"],["","Latin"]],
+        url: "https://www.visitloscabos.travel/event/coraz%c3%b3n-despechao/3918/"
+      },
+      {
+        priority: 3,
+        date: "Martes 14 · 8:00 AM",
+        icon: "🥬",
+        title: "Xplora Organic Market",
+        venue: "Xplora Jardin, El Tezal",
+        why: "Mercado orgánico local. Buena opción para el martes por la mañana si quieren algo relajado y diferente.",
+        tags: [["mercado","Mercado"],["free","Gratis"]],
+        url: "https://www.facebook.com/xplorajardin"
+      },
+      {
+        priority: 3,
+        date: "Viernes 17 · 9:00 AM",
+        icon: "🛍️",
+        title: "Palmilla Organic Market",
+        venue: "The Shoppes at Palmilla, San José",
+        why: "El mercado más bonito de Los Cabos. Artesanías, comida local, buen ambiente. Ideal para empezar el viernes antes de la noche.",
+        tags: [["mercado","Mercado"],["free","Gratis"],["","Artesanías"]],
+        url: "https://www.facebook.com/events/462765036085583/"
+      }
+    ],
+
+    /* ══════════════════════════════════════════════════════════════════
+       SECCIÓN 2: LUGARES FIJOS RECOMENDADOS
+       Experiencias que siempre están disponibles — organizadas por tipo.
+       Esta sección cambia poco (revisión mensual aprox).
+       days: días en que está disponible
+       stars: 1-3 (qué tan recomendado)
+    ══════════════════════════════════════════════════════════════════ */
+    venues: [
+      {
+        category: "🥂 Brunch",
+        description: "Para empezar el fin de semana bien",
+        color: "green",
+        places: [
+          { name: "Veleros Beach Club", highlight: "Brunch By The Sea", days: "Dom", time: "10 AM", stars: 3, url: "https://www.cabo.party/los-cabos-clubs/veleros-beach-club-los-cabos/event/brunch-by-the-sea-veleros-beach-club-los-cabos-sun", note: "La mejor vista al mar. Ambiente festivo." },
+          { name: "Bagatelle Los Cabos", highlight: "Brunch in Wonderland", days: "Dom", time: "11 AM", stars: 3, url: "https://www.cabo.party/los-cabos-clubs/bagatelle-los-cabos/event/brunch-in-wonderland-bagatelle-los-cabos-2025", note: "Show durante el brunch. El más animado." },
+          { name: "Acre Restaurant", highlight: "Saturday & Sunday Brunch", days: "Sáb–Dom", time: "10 AM", stars: 2, url: "https://www.visitloscabos.travel/event/acre-saturday-and-sunday-brunch/3509/", note: "Ambiente orgánico y tranquilo. Muy buena comida." },
+          { name: "Oystera", highlight: "Brunch Weekends", days: "Sáb–Dom", time: "10 AM", stars: 2, url: "https://www.visitloscabos.travel/event/brunch-weekends-at-oystera/2332/", note: "Especialidad en ostiones. Perfecto para ellos." }
+        ]
+      },
+      {
+        category: "🔥 Cena Show",
+        description: "Cena con espectáculo incluido — la experiencia Los Cabos",
+        color: "coral",
+        places: [
+          { name: "Rosa Negra Los Cabos", highlight: "Latin Dinner & Fire Show", days: "Lun–Sáb", time: "5 PM", stars: 3, url: "https://www.cabo.party/los-cabos-clubs/rosa-negra-los-cabos/event/latin-dinner-rosa-negra-los-cabos-2025", note: "Fire show en vivo. El más espectacular de Los Cabos." },
+          { name: "Chambao Los Cabos", highlight: "Dinner Grillhouse", days: "Dom–Sáb", time: "5 PM", stars: 3, url: "https://www.cabo.party/los-cabos-clubs/chambao-los-cabos/event/dress-to-dine-dinner-grillhouse-chambao-los-cabos-2025-sun", note: "Parrilla + show. Más íntimo que Rosa Negra." },
+          { name: "Bagatelle Los Cabos", highlight: "Show Dinner", days: "Todos los días", time: "7 PM", stars: 2, url: "https://www.cabo.party/los-cabos-clubs/bagatelle-los-cabos/event/dinner-with-show-bagatelle-los-cabos", note: "Temático según el día. Vibrante y colorido." },
+          { name: "Ilios Los Cabos", highlight: "Fire & Dinner", days: "Dom–Sáb", time: "6 PM", stars: 2, url: "https://www.cabo.party/los-cabos-clubs/ilios-restaurant-los-cabos/event/ilios-fire-and-dinner-ilios-los-cabos-sun", note: "Cocina griega con fire show. Diferente." }
+        ]
+      },
+      {
+        category: "🎸 Música en Vivo",
+        description: "Jazz, pop y acústico — para una noche más tranquila",
+        color: "blue",
+        places: [
+          { name: "Jazz on the Rocks", highlight: "Jazz Live — todos los días", days: "Todos los días", time: "Todo el día", stars: 3, url: "https://www.visitloscabos.travel/event/jazz-live-concerts-every-day/751/", note: "El clásico de San José. Siempre hay buen jazz en vivo." },
+          { name: "The Rooftop 360°", highlight: "Boogie Nights / Wknd Vibes", days: "Jue–Sáb", time: "5 PM", stars: 2, url: "https://www.visitloscabos.travel/event/boogie-nights/629/", note: "Vista panorámica de Los Cabos. Ambiente más adulto." },
+          { name: "Crania Los Cabos", highlight: "DJ Sets & Eventos especiales", days: "Vie–Sáb", time: "9 PM", stars: 2, url: "https://www.cabo.party/los-cabos-clubs/crania-los-cabos/", note: "El lugar con mejor curaduría musical. Electrónica buena." }
+        ]
+      },
+      {
+        category: "🥬 Mercados & Mañanas",
+        description: "Para empezar el día diferente",
+        color: "green",
+        places: [
+          { name: "Palmilla Organic Market", highlight: "Mercado artesanal", days: "Viernes", time: "9 AM – 2 PM", stars: 3, url: "https://www.facebook.com/events/462765036085583/", note: "El mejor mercado de Los Cabos. Artesanías, comida, ambiente." },
+          { name: "Xplora Organic Market", highlight: "Mercado orgánico", days: "Martes", time: "8 AM – 1 PM", stars: 2, url: "https://www.facebook.com/xplorajardin", note: "Local y auténtico. Buenas opciones de comida fresca." },
+          { name: "Mercado Orgánico Pedregal", highlight: "Mercado local", days: "Sábados", time: "8 AM – 1 PM", stars: 2, url: "https://www.facebook.com/events/967064718514726", note: "El más cercano a Cabo San Lucas. Tranquilo y local." }
+        ]
+      }
+    ]
+
+  }; /* fin WEEKLY_DATA */
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CSS — ESTÁTICO
+       ═══════════════════════════════════════════════════════════════════ -->
+  <style>
+    :root {
+      --azul:   #0a2342;
+      --gold:   #c9a84c;
+      --coral:  #e8604c;
+      --verde:  #1a6b4a;
+      --purple: #5b21b6;
+      --gris:   #f4f5f7;
+      --borde:  #e2e8f0;
+      --texto:  #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f4f8; color: var(--texto); }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, var(--azul) 0%, #1a3a5c 70%, #0d2137 100%);
+      color: #fff; padding: 28px 24px 22px; position: relative; overflow: hidden;
+    }
+    header::after {
+      content:''; position:absolute; bottom:0; left:0; right:0; height:4px;
+      background: linear-gradient(90deg, var(--gold), var(--coral), var(--gold));
+    }
+    .header-badge {
+      background: var(--gold); color: var(--azul);
+      font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase;
+      padding:4px 12px; border-radius:20px; display:inline-block; margin-bottom:10px;
+    }
+    header h1 { font-size:1.8rem; font-weight:800; line-height:1.2; }
+    header h1 span { color:var(--gold); }
+    .header-sub { font-size:.85rem; opacity:.7; margin-top:6px; }
+
+    .container { max-width:1000px; margin:0 auto; padding:24px 16px; }
+
+    /* SECTION TITLES */
+    .section-header {
+      display:flex; align-items:center; gap:10px;
+      margin-bottom:16px; margin-top:32px;
+    }
+    .section-header:first-child { margin-top:0; }
+    .section-title {
+      font-size:1.15rem; font-weight:800; color:var(--azul);
+    }
+    .section-sub { font-size:.82rem; color:#64748b; margin-top:2px; }
+    .section-line {
+      flex:1; height:2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    /* ── ESPECIALES ── */
+    .specials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px;
+    }
+    .special-card {
+      background: #fff; border:1px solid var(--borde); border-radius:14px;
+      padding: 18px; display:flex; flex-direction:column; gap:10px;
+      transition: box-shadow .2s, transform .2s; position:relative; overflow:hidden;
+    }
+    .special-card:hover { box-shadow:0 8px 24px rgba(10,35,66,.12); transform:translateY(-2px); }
+    .special-card.p1 { border-left:5px solid var(--gold); }
+    .special-card.p2 { border-left:5px solid var(--coral); }
+    .special-card.p3 { border-left:5px solid #94a3b8; }
+    .priority-badge {
+      position:absolute; top:14px; right:14px;
+      font-size:10px; font-weight:800; padding:3px 10px; border-radius:20px;
+      letter-spacing:.5px; text-transform:uppercase;
+    }
+    .p1 .priority-badge { background:#fef3c7; color:#92400e; }
+    .p2 .priority-badge { background:#fee2e2; color:#991b1b; }
+    .p3 .priority-badge { background:var(--gris); color:#64748b; }
+    .special-date { font-size:.78rem; font-weight:700; color:#64748b; }
+    .special-icon-title { display:flex; align-items:flex-start; gap:10px; }
+    .special-icon { font-size:1.8rem; line-height:1; flex-shrink:0; }
+    .special-title { font-size:1rem; font-weight:800; color:var(--azul); line-height:1.3; }
+    .special-venue { font-size:.8rem; color:#64748b; margin-top:2px; }
+    .special-why {
+      font-size:.83rem; color:#475569; line-height:1.5;
+      background: #f8fafc; border-radius:8px; padding:10px 12px;
+    }
+    .special-tags { display:flex; gap:5px; flex-wrap:wrap; }
+    .tag { font-size:10px; padding:2px 8px; border-radius:20px; font-weight:600; background:var(--gris); color:#475569; }
+    .tag.especial  { background:#fed7aa; color:#c2410c; }
+    .tag.nightlife { background:#ede9fe; color:#5b21b6; }
+    .tag.brunch    { background:#d1fae5; color:#065f46; }
+    .tag.cultura   { background:#dbeafe; color:#1e40af; }
+    .tag.mercado   { background:#fce7f3; color:#9d174d; }
+    .tag.free      { background:#d1fae5; color:#065f46; }
+    .special-link {
+      display:inline-flex; align-items:center; gap:5px;
+      font-size:.8rem; font-weight:700; color:var(--coral);
+      text-decoration:none; margin-top:2px;
+    }
+    .special-link:hover { text-decoration:underline; }
+
+    /* ── VENUES FIJOS ── */
+    .venue-category {
+      background:#fff; border:1px solid var(--borde); border-radius:14px;
+      margin-bottom:14px; overflow:hidden;
+    }
+    .venue-cat-header {
+      padding:14px 18px; display:flex; align-items:center; justify-content:space-between;
+      cursor:pointer; user-select:none;
+    }
+    .venue-cat-header:hover { background:#f8fafc; }
+    .venue-cat-title { font-size:1rem; font-weight:800; color:var(--azul); }
+    .venue-cat-desc  { font-size:.78rem; color:#64748b; margin-top:2px; }
+    .venue-cat-arrow { font-size:1rem; color:#94a3b8; transition:.2s; }
+    .venue-cat-body  { border-top:1px solid var(--borde); }
+    .venue-place {
+      display:flex; align-items:flex-start; gap:14px;
+      padding:13px 18px; border-bottom:1px solid var(--borde);
+    }
+    .venue-place:last-child { border-bottom:none; }
+    .venue-stars { color:var(--gold); font-size:.85rem; min-width:52px; padding-top:2px; }
+    .venue-info { flex:1; }
+    .venue-name { font-weight:700; font-size:.9rem; color:var(--azul); }
+    .venue-highlight { font-size:.8rem; color:var(--coral); font-weight:600; margin-top:1px; }
+    .venue-meta { font-size:.75rem; color:#64748b; margin-top:3px; }
+    .venue-note { font-size:.78rem; color:#475569; margin-top:4px; font-style:italic; }
+    .venue-link {
+      font-size:.75rem; font-weight:600; color:var(--coral);
+      text-decoration:none; white-space:nowrap; padding-top:4px;
+    }
+    .venue-link:hover { text-decoration:underline; }
+
+    /* COLOR ACCENTS */
+    .accent-green  .venue-cat-header { border-left:4px solid #059669; }
+    .accent-coral  .venue-cat-header { border-left:4px solid var(--coral); }
+    .accent-blue   .venue-cat-header { border-left:4px solid #1e40af; }
+    .accent-purple .venue-cat-header { border-left:4px solid var(--purple); }
+
+    /* FUENTES */
+    .sources-section { margin-top:36px; }
+    .sources-title {
+      font-size:1rem; font-weight:800; color:var(--azul);
+      margin-bottom:14px; padding-bottom:8px; border-bottom:3px solid var(--gold);
+      display:flex; align-items:center; gap:8px;
+    }
+    .sources-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    @media(max-width:720px){ .sources-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:480px){ .sources-grid { grid-template-columns:1fr; } }
+    .source-card {
+      background:#fff; border:1px solid var(--borde); border-radius:10px;
+      padding:14px 16px; display:flex; flex-direction:column; gap:5px;
+      transition:box-shadow .2s, transform .2s;
+    }
+    .source-card:hover { box-shadow:0 6px 18px rgba(10,35,66,.1); transform:translateY(-2px); }
+    .source-card .sc-name { font-weight:700; font-size:.88rem; color:var(--azul); }
+    .source-card .sc-desc { font-size:.77rem; color:#64748b; }
+    .sc-type { font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; width:fit-content; margin-bottom:2px; }
+    .sc-web { background:#dbeafe; color:#1e40af; }
+    .sc-ig  { background:#fce7f3; color:#9d174d; }
+    .sc-fb  { background:#ede9fe; color:#5b21b6; }
+    .sc-gov { background:#d1fae5; color:#065f46; }
+    .source-card a { font-size:.78rem; color:var(--coral); font-weight:600; text-decoration:none; margin-top:3px; }
+    .source-card a:hover { text-decoration:underline; }
+
+    footer {
+      text-align:center; font-size:.78rem; color:#94a3b8;
+      padding:24px; border-top:1px solid var(--borde); margin-top:24px;
+    }
+
+    @media(max-width:600px){
+      .specials-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     RENDERER JS — ESTÁTICO
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+  const priorityLabel = { 1:"⭐ Imperdible", 2:"👍 Recomendado", 3:"Opcional" };
+  const stars = n => "★".repeat(n) + "☆".repeat(3-n);
+  const accentClass = { green:"accent-green", coral:"accent-coral", blue:"accent-blue", purple:"accent-purple" };
+
+  function buildTags(tags) {
+    return (tags||[]).map(([cls,lbl])=>`<span class="tag${cls?' '+cls:''}">${lbl}</span>`).join('');
+  }
+
+  function buildSpecial(s) {
+    const pCls = `p${s.priority}`;
+    return `
+    <div class="special-card ${pCls}">
+      <span class="priority-badge">${priorityLabel[s.priority]}</span>
+      <div class="special-date">📅 ${s.date}</div>
+      <div class="special-icon-title">
+        <div class="special-icon">${s.icon}</div>
+        <div>
+          <div class="special-title">${s.title}</div>
+          <div class="special-venue">📍 ${s.venue}</div>
+        </div>
+      </div>
+      <div class="special-why">${s.why}</div>
+      <div class="special-tags">${buildTags(s.tags)}</div>
+      <a class="special-link" href="${s.url}" target="_blank">🔗 Ver info →</a>
+    </div>`;
+  }
+
+  function buildVenuePlace(p) {
+    return `
+    <div class="venue-place">
+      <div class="venue-stars">${stars(p.stars)}</div>
+      <div class="venue-info">
+        <div class="venue-name">${p.name}</div>
+        <div class="venue-highlight">${p.highlight}</div>
+        <div class="venue-meta">📅 ${p.days} · ${p.time}</div>
+        <div class="venue-note">${p.note}</div>
+      </div>
+      <a class="venue-link" href="${p.url}" target="_blank">→ Info</a>
+    </div>`;
+  }
+
+  function buildVenueCategory(v) {
+    const acc = accentClass[v.color] || '';
+    const places = v.places.map(buildVenuePlace).join('');
+    return `
+    <div class="venue-category ${acc}">
+      <div class="venue-cat-header">
+        <div>
+          <div class="venue-cat-title">${v.category}</div>
+          <div class="venue-cat-desc">${v.description}</div>
+        </div>
+      </div>
+      <div class="venue-cat-body">${places}</div>
+    </div>`;
+  }
+
+  function render() {
+    const W = WEEKLY_DATA;
+    document.title = `Eventos Los Cabos — ${W.weekLabel}`;
+
+    document.getElementById('header-dates').textContent = `${W.weekDates} · Actualizado en tiempo real`;
+    document.getElementById('specials-container').innerHTML = W.specials.map(buildSpecial).join('');
+    document.getElementById('venues-container').innerHTML = W.venues.map(buildVenueCategory).join('');
+    document.getElementById('footer-date').textContent = W.generatedDate;
+  }
+
+  document.addEventListener('DOMContentLoaded', render);
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     HTML SHELL — ESTÁTICO
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<header>
+  <div class="header-badge">📅 Semana en Los Cabos</div>
+  <h1>¿Qué hacemos en <span>Los Cabos</span> esta semana?</h1>
+  <div class="header-sub" id="header-dates"></div>
+</header>
+
+<div class="container">
+
+  <!-- SECCIÓN 1: ESPECIALES -->
+  <div class="section-header">
+    <div>
+      <div class="section-title">🌟 Eventos especiales esta semana</div>
+      <div class="section-sub">Cosas únicas que no se repiten — para salir de la rutina</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+  <div class="specials-grid" id="specials-container"></div>
+
+  <!-- SECCIÓN 2: FIJOS -->
+  <div class="section-header">
+    <div>
+      <div class="section-title">📍 Lugares fijos recomendados</div>
+      <div class="section-sub">Siempre disponibles — organizados por tipo de experiencia</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+  <div id="venues-container"></div>
+
+  <!-- SECCIÓN 3: FUENTES -->
+  <div class="sources-section">
+    <div class="sources-title">🔗 Fuentes — Consulta directa para más eventos</div>
+    <div class="sources-grid">
+
+      <div class="source-card">
+        <span class="sc-type sc-web">Web · Nightlife</span>
+        <div class="sc-name">🎉 cabo.party</div>
+        <div class="sc-desc">La fuente más completa de nightlife: cenas show, DJs, beach clubs. Calendario diario actualizado.</div>
+        <a href="https://www.cabo.party/los-cabos-mexico-event-calendar" target="_blank">→ Ver calendario completo</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-gov">Oficial Turismo</span>
+        <div class="sc-name">🏛️ visitloscabos.travel</div>
+        <div class="sc-desc">Cultura, gastronomía, arte y deportes. Fuente oficial con filtro por fin de semana.</div>
+        <a href="https://www.visitloscabos.travel/events/" target="_blank">→ Ver calendario oficial</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-web">Revista Digital</span>
+        <div class="sc-name">🗓️ Destino Los Cabos Magazine</div>
+        <div class="sc-desc">Mercados orgánicos, arte y eventos locales. Ideal para actividades matutinas y culturales.</div>
+        <a href="https://www.destinoloscabos.com/event-directory/" target="_blank">→ Ver eventos</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-web">Ticketera</span>
+        <div class="sc-name">🎫 Eventbrite Cabo</div>
+        <div class="sc-desc">Conciertos y eventos con boleto. Filtra "this week" para ver disponibles.</div>
+        <a href="https://www.eventbrite.com/d/mexico--cabo-san-lucas/events--this-week/" target="_blank">→ Ver esta semana</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-web">Web Local</span>
+        <div class="sc-name">📅 eventsloscabos.com</div>
+        <div class="sc-desc">Escena local y underground: techno, cerveza artesanal, eventos independientes auténticos.</div>
+        <a href="https://www.eventsloscabos.com" target="_blank">→ Ver eventos</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-gov">Gobierno</span>
+        <div class="sc-name">🏛️ turismo.loscabos.gob.mx</div>
+        <div class="sc-desc">Calendario oficial del Ayuntamiento. Eventos gratuitos, culturales y municipales.</div>
+        <a href="https://turismo.loscabos.gob.mx/calendario-de-eventos/" target="_blank">→ Ver calendario</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-ig">Instagram</span>
+        <div class="sc-name">📸 @delcaboevents</div>
+        <div class="sc-desc">26K seguidores. La cuenta más grande de eventos locales en Los Cabos.</div>
+        <a href="https://www.instagram.com/delcaboevents/" target="_blank">→ Ver Instagram</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-ig">Instagram</span>
+        <div class="sc-name">📸 @cabo.party</div>
+        <div class="sc-desc">Nightlife diario, clubs y DJs. Muy visual y actualizada. La mejor para salir de noche.</div>
+        <a href="https://www.instagram.com/cabo.party/" target="_blank">→ Ver Instagram</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-ig">Instagram</span>
+        <div class="sc-name">📸 @loscabosguide</div>
+        <div class="sc-desc">Guía local de experiencias: restaurantes, actividades y eventos con fotos reales.</div>
+        <a href="https://www.instagram.com/loscabosguide/" target="_blank">→ Ver Instagram</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-fb">Facebook</span>
+        <div class="sc-name">📘 Turismo Los Cabos</div>
+        <div class="sc-desc">Página oficial municipal. Festividades y eventos culturales institucionales.</div>
+        <a href="https://www.facebook.com/loscabosturismo" target="_blank">→ Ver página</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-fb">Facebook</span>
+        <div class="sc-name">📘 Eventos Los Cabos (grupo)</div>
+        <div class="sc-desc">Grupo activo donde locales publican eventos, fiestas y actividades de la semana.</div>
+        <a href="https://www.facebook.com/groups/eventosloscabos/" target="_blank">→ Ver grupo</a>
+      </div>
+
+      <div class="source-card">
+        <span class="sc-type sc-web">Concierge</span>
+        <div class="sc-name">🤿 Cabo Adventures</div>
+        <div class="sc-desc">Tours, excursiones y actividades al aire libre. Para planear algo diferente en el mar.</div>
+        <a href="https://www.cabo-adventures.com/activities/" target="_blank">→ Ver actividades</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Fuentes: cabo.party · visitloscabos.travel · destinoloscabos.com · eventbrite.com<br>
+  Generado el <span id="footer-date"></span> · Ivan Guaderrama · Los Cabos, BCS
+</footer>
+
+</body>
+</html>
