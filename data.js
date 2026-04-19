@@ -4,21 +4,22 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 12–18 Abril 2026",
-  weekDates:     "12 – 18 de Abril, 2026",
-  generatedDate: "12 de Abril, 2026",
+  weekLabel:     "Semana 19–25 Abril 2026",
+  weekDates:     "19 – 25 de Abril, 2026",
+  generatedDate: "19 de Abril, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 17", emoji:"☁️", desc:"Nublado",              max:22, min:21, rain:0  },
-    { day:"Sáb 18", emoji:"🌤️", desc:"Mayormente despejado", max:23, min:21, rain:0  },
-    { day:"Dom 12", emoji:"🌤️", desc:"Mayormente despejado", max:25, min:23, rain:0  },
-    { day:"Lun 13", emoji:"☁️", desc:"Nublado",              max:26, min:24, rain:0  }
+    { day:"Vie 24", emoji:"🌤️", desc:"Mayormente despejado", max:22, min:21, rain:0  },
+    { day:"Sáb 25", emoji:"☁️", desc:"Nublado",              max:23, min:21, rain:0  },
+    { day:"Dom 19", emoji:"🌤️", desc:"Mayormente despejado", max:22, min:21, rain:0  },
+    { day:"Lun 20", emoji:"☁️", desc:"Nublado",              max:22, min:21, rain:0  }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
-    { label:"Semana 12–18 Abr", url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 12–18 Abr", url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 19–25 Abr", url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -30,94 +31,94 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Sábado 18 · 12:00 PM",
-      icon: "🦪",
-      title: "Festival del Ostión 2026 — 3ª Edición",
-      venue: "Veleros Beach Club",
-      mapsUrl: "https://maps.google.com/?q=Veleros+Beach+Club+Los+Cabos",
-      price: "$$",
+      date: "Dom 19 – Dom 26 · Todo el día",
+      icon: "🏊",
+      title: "IRONMAN 70.3 Los Cabos 2026 — Semana del Evento",
+      venue: "GR Solaris Lighthouse (Expo) · Palmilla Beach (carrera)",
+      mapsUrl: "https://maps.google.com/?q=GR+Solaris+Lighthouse+Los+Cabos",
+      price: "$",
       reservation: false,
-      why: "El festival gastronómico más esperado del año. Ostiones frescos, música en vivo y playa. Afterparty en Crania 9 PM con Soul of Hex.",
-      tags: [["especial","Festival"],["brunch","Beach Club"],["","Mariscos"]],
-      url: "https://www.cabo.party/event/festival-del-ostion-2026-veleros-los-cabos-18-april-2026"
+      why: "¡El IRONMAN regresa a Los Cabos después de 3 años! Toda la semana hay ambiente especial: 1,800 atletas de 45 países. El Expo está en GR Solaris Lighthouse para ver a los participantes. La carrera es el domingo 26 con cierre de vialidades en el Corredor.",
+      tags: [["especial","Evento único"],["deporte","Triatlón"],["free","Gratis"]],
+      url: "https://www.destinoloscabos.com/blog/ironman-70-3-returns-to-los-cabos/"
     },
     {
       priority: 1,
-      date: "Miércoles 15 · 7:00 PM",
+      date: "Dom 19 · Hora por confirmar",
+      icon: "🌿",
+      title: "ANAJICONDI — Mindful Dining Meets Jungle Retreat",
+      venue: "Agua Restaurant, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Agua+Restaurant+Los+Cabos",
+      price: "$$$",
+      reservation: true,
+      why: "Experiencia culinaria única que fusiona bienestar y gastronomía en un ambiente de retiro natural. No es una cena ordinaria — es una experiencia sensorial y consciente.",
+      tags: [["especial","Evento único"],["cultura","Bienestar"],["gastronomía","Fine Dining"]],
+      url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 2,
+      date: "Martes 21 · 5:00 PM",
+      icon: "🍜",
+      title: "Sabores San José — Corredor Gastronómico",
+      venue: "Centro Histórico, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Plaza+Mijares+San+Jose+del+Cabo",
+      price: "$",
+      reservation: false,
+      why: "El centro histórico de San José se transforma en un corredor gastronómico de 5 a 9 PM. Productores locales, estaciones de degustación y presentaciones culturales. Muy recomendado para conocer la escena local.",
+      tags: [["gastronomía","Gastronómico"],["cultura","Cultural"],["free","Gratis"]],
+      url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 2,
+      date: "Miércoles 22 · 7:00 PM",
       icon: "🎹",
-      title: "PIANOFEST — Live Piano Night",
-      venue: "Crania Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos",
-      price: "$$$",
-      reservation: true,
-      why: "Evento único de música en vivo con piano. Crania tiene de los mejores ambientes — no es la noche típica de club.",
-      tags: [["especial","Evento único"],["cultura","Música en Vivo"]],
-      url: "https://www.cabo.party/event/pianofest-crania-los-cabos-15-april-2026"
-    },
-    {
-      priority: 2,
-      date: "Martes 14 · 12:00 PM",
-      icon: "⛵",
-      title: "Hip Hop Sessions — Boat Party",
-      venue: "Cabo Escape Tours",
-      mapsUrl: "https://maps.google.com/?q=Marina+Cabo+San+Lucas",
-      price: "$$$",
-      reservation: true,
-      why: "Fiesta en barco por la bahía con música hip hop. Experiencia diferente si no lo han hecho.",
-      tags: [["nightlife","Fiesta en barco"],["","Hip Hop"]],
-      url: "https://www.eventbrite.com/e/hip-hop-sessions-boat-party-cabo-san-lucas-tickets-136202203457"
-    },
-    {
-      priority: 2,
-      date: "Miércoles 15 · 7:00 PM",
-      icon: "🎤",
-      title: "Daline Jones & The Diego Ramírez Trio",
+      title: "DALINE JONES & The Diego Ramírez Trio",
       venue: "Jazz on the Rocks",
       mapsUrl: "https://maps.google.com/?q=Jazz+on+the+Rocks+San+Jose+del+Cabo",
       price: "$$",
       reservation: false,
-      why: "Jazz en vivo con artista invitada. Jazz on the Rocks es siempre buen plan, con artista especial es mejor.",
-      tags: [["cultura","Jazz en Vivo"],["","Música"]],
+      why: "Jazz en vivo con artista invitada. Jazz on the Rocks es siempre buen plan, con artista especial es mejor. Ambiente íntimo y muy buena música.",
+      tags: [["cultura","Jazz en Vivo"],["música","Música"]],
       url: "https://www.visitloscabos.travel/event/daline-jones-%26-the-diego-ram%c3%8drez-trio/1943/"
     },
     {
       priority: 2,
-      date: "Viernes 17 · Noche",
-      icon: "💔",
-      title: "Corazón Despecha'o — Noche Temática",
-      venue: "Corazón Beach Club",
-      mapsUrl: "https://maps.google.com/?q=Corazon+Beach+Club+Los+Cabos",
+      date: "Martes 21 · Atardecer",
+      icon: "🌅",
+      title: "Moon Zipping Fire — UTVs al Atardecer + Tirolesas Nocturnas",
+      venue: "Wild Canyon Adventures",
+      mapsUrl: "https://maps.google.com/?q=Wild+Canyon+Adventures+Los+Cabos",
+      price: "$$",
+      reservation: true,
+      why: "Combo aventura diferente: UTVs al atardecer en el cañón + tirolesas en la noche con vista al mar. Ideal si buscan algo fuera de lo ordinario del nightlife.",
+      tags: [["aventura","Aventura"],["especial","Nocturno"]],
+      url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 3,
+      date: "Viernes 24 · 7:00 PM",
+      icon: "🦞",
+      title: "Baja Seafood Night at Palmerio",
+      venue: "Four Seasons Resort Los Cabos at Costa Palmas",
+      mapsUrl: "https://maps.google.com/?q=Four+Seasons+Los+Cabos+Costa+Palmas",
+      price: "$$$",
+      reservation: true,
+      why: "Noche especial de mariscos de Baja California en el restaurante Palmerio del Four Seasons. Excelente calidad y ambiente de lujo junto al mar.",
+      tags: [["gastronomía","Mariscos"],["lujo","Fine Dining"]],
+      url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 3,
+      date: "Miércoles 22 · Noche",
+      icon: "🇲🇽",
+      title: "México Mágico — Espectáculo Cultural",
+      venue: "Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Los+Cabos+Mexico",
       price: "$$",
       reservation: false,
-      why: "Noche de música latina despechada. Diferente al nightlife típico — buen plan divertido.",
-      tags: [["nightlife","Noche Temática"],["","Latin"]],
-      url: "https://www.visitloscabos.travel/event/coraz%c3%b3n-despechao/3918/"
-    },
-    {
-      priority: 3,
-      date: "Viernes 17 · 9:00 AM",
-      icon: "🛍️",
-      title: "Palmilla Organic Market",
-      venue: "The Shoppes at Palmilla, San José",
-      mapsUrl: "https://maps.google.com/?q=Shoppes+at+Palmilla+San+Jose+del+Cabo",
-      price: "$",
-      reservation: false,
-      why: "El mercado más bonito de Los Cabos. Artesanías, comida local, buen ambiente matutino.",
-      tags: [["mercado","Mercado"],["free","Gratis"],["","Artesanías"]],
-      url: "https://www.facebook.com/events/462765036085583/"
-    },
-    {
-      priority: 3,
-      date: "Sábado 18 · 8:00 AM",
-      icon: "🥬",
-      title: "Mercado Orgánico Pedregal",
-      venue: "Del Jorongo 210, Pedregal",
-      mapsUrl: "https://maps.google.com/?q=Pedregal+Cabo+San+Lucas",
-      price: "$",
-      reservation: false,
-      why: "Mercado local cerca de Cabo San Lucas. Comida fresca y productos orgánicos.",
-      tags: [["mercado","Mercado"],["free","Gratis"]],
-      url: "https://www.facebook.com/events/967064718514726"
+      why: "Espectáculo de entretenimiento cultural con temática mexicana. Buen plan para una noche diferente al nightlife convencional.",
+      tags: [["cultura","Cultural"],["entretenimiento","Espectáculo"]],
+      url: "https://www.visitloscabos.travel/events/"
     }
   ],
 
