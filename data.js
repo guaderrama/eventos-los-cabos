@@ -4,22 +4,23 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 19–25 Abril 2026",
-  weekDates:     "19 – 25 de Abril, 2026",
-  generatedDate: "19 de Abril, 2026",
+  weekLabel:     "Semana 3–9 Mayo 2026",
+  weekDates:     "3 – 9 de Mayo, 2026",
+  generatedDate: "3 de Mayo, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 24", emoji:"🌤️", desc:"Mayormente despejado", max:22, min:21, rain:0  },
-    { day:"Sáb 25", emoji:"☁️", desc:"Nublado",              max:23, min:21, rain:0  },
-    { day:"Dom 19", emoji:"🌤️", desc:"Mayormente despejado", max:22, min:21, rain:0  },
-    { day:"Lun 20", emoji:"☁️", desc:"Nublado",              max:22, min:21, rain:0  }
+    { day:"Vie 8",  emoji:"☁️",  desc:"Nublado",              max:32, min:21, rain:0 },
+    { day:"Sáb 9",  emoji:"☁️",  desc:"Nublado",              max:33, min:22, rain:2 },
+    { day:"Dom 3",  emoji:"☁️",  desc:"Nublado",              max:29, min:19, rain:0 },
+    { day:"Lun 4",  emoji:"☁️",  desc:"Nublado",              max:28, min:19, rain:0 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
-    { label:"Semana 12–18 Abr", url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 19–25 Abr", url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 12–18 Abr",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 19–25 Abr",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 26 Abr–2 May", url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -31,93 +32,80 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Dom 19 – Dom 26 · Todo el día",
-      icon: "🏊",
-      title: "IRONMAN 70.3 Los Cabos 2026 — Semana del Evento",
-      venue: "GR Solaris Lighthouse (Expo) · Palmilla Beach (carrera)",
-      mapsUrl: "https://maps.google.com/?q=GR+Solaris+Lighthouse+Los+Cabos",
-      price: "$",
-      reservation: false,
-      why: "¡El IRONMAN regresa a Los Cabos después de 3 años! Toda la semana hay ambiente especial: 1,800 atletas de 45 países. El Expo está en GR Solaris Lighthouse para ver a los participantes. La carrera es el domingo 26 con cierre de vialidades en el Corredor.",
-      tags: [["especial","Evento único"],["deporte","Triatlón"],["free","Gratis"]],
-      url: "https://www.destinoloscabos.com/blog/ironman-70-3-returns-to-los-cabos/"
+      date: "Jue 7 – Sáb 9 · 3 noches",
+      icon: "🎸",
+      title: "Viva El Gonzo Music Festival 2026 — Segunda Edición",
+      venue: "Puerto Los Cabos, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Puerto+Los+Cabos+San+Jose+del+Cabo",
+      price: "$$$",
+      reservation: true,
+      why: "El festival musical más esperado del año regresa para su segunda edición con un cartel enorme: My Morning Jacket y Goose como headliners, más un set acústico solo de Jim James. 3 noches de música en vivo en Puerto Los Cabos. Es EL evento de la semana.",
+      tags: [["especial","Festival"],["música","Música en Vivo"],["cultura","Cultural"]],
+      url: "https://www.vivaelgonzo.com"
     },
     {
       priority: 1,
-      date: "Dom 19 · Hora por confirmar",
-      icon: "🌿",
-      title: "ANAJICONDI — Mindful Dining Meets Jungle Retreat",
-      venue: "Agua Restaurant, Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Agua+Restaurant+Los+Cabos",
-      price: "$$$",
-      reservation: true,
-      why: "Experiencia culinaria única que fusiona bienestar y gastronomía en un ambiente de retiro natural. No es una cena ordinaria — es una experiencia sensorial y consciente.",
-      tags: [["especial","Evento único"],["cultura","Bienestar"],["gastronomía","Fine Dining"]],
+      date: "Martes 5 · Todo el día",
+      icon: "🇲🇽",
+      title: "Cinco de Mayo — Celebraciones por Los Cabos",
+      venue: "Restaurantes y bares en Cabo San Lucas y San José",
+      mapsUrl: "https://maps.google.com/?q=Cabo+San+Lucas",
+      price: "$$",
+      reservation: false,
+      why: "El 5 de Mayo se celebra en restaurantes y bares de Los Cabos con tragos especiales, mariachis, comida tradicional y promociones temáticas. Buen plan martes — busquen los menús especiales en La Lupita, El Squid Roe, Cabo Wabo y Mi Casa.",
+      tags: [["especial","Tradición"],["cultura","Mexicano"],["gastronomía","Tradicional"]],
       url: "https://www.visitloscabos.travel/events/"
     },
     {
       priority: 2,
-      date: "Martes 21 · 5:00 PM",
+      date: "Sábado 9 · Todo el día",
+      icon: "💐",
+      title: "Pre-Mother's Day — Cenas Especiales por el 10 de Mayo",
+      venue: "Restaurantes premium en todo Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Los+Cabos+restaurants",
+      price: "$$$",
+      reservation: true,
+      why: "El 10 de Mayo es el Día de las Madres en México. El sábado 9 muchos restaurantes anuncian cenas especiales y brunchs para el domingo (Sora at Waldorf Astoria, Acre, Veleros Beach Club, Bagatelle). Reserven con anticipación si quieren llevar a alguien especial.",
+      tags: [["especial","Día de las Madres"],["gastronomía","Fine Dining"]],
+      url: "https://www.visitloscabos.travel/event/mother%e2%80%99s-day-epic-breakfast/4077/"
+    },
+    {
+      priority: 2,
+      date: "Martes 5 · 5:00 PM",
       icon: "🍜",
       title: "Sabores San José — Corredor Gastronómico",
       venue: "Centro Histórico, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Plaza+Mijares+San+Jose+del+Cabo",
       price: "$",
       reservation: false,
-      why: "El centro histórico de San José se transforma en un corredor gastronómico de 5 a 9 PM. Productores locales, estaciones de degustación y presentaciones culturales. Muy recomendado para conocer la escena local.",
+      why: "El centro histórico se transforma en corredor gastronómico de 5 a 9 PM con productores locales, estaciones de degustación y presentaciones culturales. Esta semana coincide con el 5 de Mayo — ambiente extra festivo. Muy recomendado.",
       tags: [["gastronomía","Gastronómico"],["cultura","Cultural"],["free","Gratis"]],
       url: "https://www.visitloscabos.travel/events/"
     },
     {
       priority: 2,
-      date: "Miércoles 22 · 7:00 PM",
-      icon: "🎹",
-      title: "DALINE JONES & The Diego Ramírez Trio",
-      venue: "Jazz on the Rocks",
-      mapsUrl: "https://maps.google.com/?q=Jazz+on+the+Rocks+San+Jose+del+Cabo",
-      price: "$$",
-      reservation: false,
-      why: "Jazz en vivo con artista invitada. Jazz on the Rocks es siempre buen plan, con artista especial es mejor. Ambiente íntimo y muy buena música.",
-      tags: [["cultura","Jazz en Vivo"],["música","Música"]],
-      url: "https://www.visitloscabos.travel/event/daline-jones-%26-the-diego-ram%c3%8drez-trio/1943/"
+      date: "Vie 8 – Sáb 9 · 6:00 PM",
+      icon: "🍢",
+      title: "One Week Only — Cocina Balinesa en Restaurant EQUIS",
+      venue: "Zadún Ritz-Carlton Reserve, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Zadun+Ritz+Carlton+Reserve+San+Jose+del+Cabo",
+      price: "$$$",
+      reservation: true,
+      why: "Arranca la temporada de cocina balinesa de tiempo limitado en EQUIS del Zadún Ritz-Carlton (8 al 22 de mayo). Sabores auténticos del archipiélago indonesio en uno de los mejores resorts de la zona. Solo dos semanas — vale la pena reservar.",
+      tags: [["gastronomía","Internacional"],["lujo","Fine Dining"],["especial","Tiempo limitado"]],
+      url: "https://www.visitloscabos.travel/event/one-week-only-bali-cuisine-at-equis/3925/"
     },
     {
-      priority: 2,
-      date: "Martes 21 · Atardecer",
+      priority: 3,
+      date: "Martes 5 · Atardecer",
       icon: "🌅",
       title: "Moon Zipping Fire — UTVs al Atardecer + Tirolesas Nocturnas",
       venue: "Wild Canyon Adventures",
       mapsUrl: "https://maps.google.com/?q=Wild+Canyon+Adventures+Los+Cabos",
       price: "$$",
       reservation: true,
-      why: "Combo aventura diferente: UTVs al atardecer en el cañón + tirolesas en la noche con vista al mar. Ideal si buscan algo fuera de lo ordinario del nightlife.",
+      why: "Combo aventura diferente: UTVs al atardecer en el cañón + tirolesas en la noche con vista al mar. Si quieren algo distinto al nightlife convencional para celebrar el 5 de mayo en plan aventura, este es el plan.",
       tags: [["aventura","Aventura"],["especial","Nocturno"]],
-      url: "https://www.visitloscabos.travel/events/"
-    },
-    {
-      priority: 3,
-      date: "Viernes 24 · 7:00 PM",
-      icon: "🦞",
-      title: "Baja Seafood Night at Palmerio",
-      venue: "Four Seasons Resort Los Cabos at Costa Palmas",
-      mapsUrl: "https://maps.google.com/?q=Four+Seasons+Los+Cabos+Costa+Palmas",
-      price: "$$$",
-      reservation: true,
-      why: "Noche especial de mariscos de Baja California en el restaurante Palmerio del Four Seasons. Excelente calidad y ambiente de lujo junto al mar.",
-      tags: [["gastronomía","Mariscos"],["lujo","Fine Dining"]],
-      url: "https://www.visitloscabos.travel/events/"
-    },
-    {
-      priority: 3,
-      date: "Miércoles 22 · Noche",
-      icon: "🇲🇽",
-      title: "México Mágico — Espectáculo Cultural",
-      venue: "Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Los+Cabos+Mexico",
-      price: "$$",
-      reservation: false,
-      why: "Espectáculo de entretenimiento cultural con temática mexicana. Buen plan para una noche diferente al nightlife convencional.",
-      tags: [["cultura","Cultural"],["entretenimiento","Espectáculo"]],
       url: "https://www.visitloscabos.travel/events/"
     }
   ],
