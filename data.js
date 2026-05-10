@@ -4,23 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 3–9 Mayo 2026",
-  weekDates:     "3 – 9 de Mayo, 2026",
-  generatedDate: "3 de Mayo, 2026",
+  weekLabel:     "Semana 10–16 Mayo 2026",
+  weekDates:     "10 – 16 de Mayo, 2026",
+  generatedDate: "10 de Mayo, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 8",  emoji:"☁️",  desc:"Nublado",              max:32, min:21, rain:0 },
-    { day:"Sáb 9",  emoji:"☁️",  desc:"Nublado",              max:33, min:22, rain:2 },
-    { day:"Dom 3",  emoji:"☁️",  desc:"Nublado",              max:29, min:19, rain:0 },
-    { day:"Lun 4",  emoji:"☁️",  desc:"Nublado",              max:28, min:19, rain:0 }
+    { day:"Vie 15", emoji:"☁️", desc:"Nublado",              max:35, min:28, rain:0 },
+    { day:"Sáb 16", emoji:"☁️", desc:"Nublado",              max:35, min:24, rain:0 },
+    { day:"Dom 10", emoji:"🌧️", desc:"Lluvia ligera",        max:34, min:23, rain:0 },
+    { day:"Lun 11", emoji:"🌤️", desc:"Mayormente despejado", max:35, min:26, rain:2 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
     { label:"Semana 12–18 Abr",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 19–25 Abr",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 26 Abr–2 May", url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 26 Abr–2 May", url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 3–9 May",      url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -32,81 +33,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Jue 7 – Sáb 9 · 3 noches",
-      icon: "🎸",
-      title: "Viva El Gonzo Music Festival 2026 — Segunda Edición",
-      venue: "Puerto Los Cabos, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Puerto+Los+Cabos+San+Jose+del+Cabo",
-      price: "$$$",
-      reservation: true,
-      why: "El festival musical más esperado del año regresa para su segunda edición con un cartel enorme: My Morning Jacket y Goose como headliners, más un set acústico solo de Jim James. 3 noches de música en vivo en Puerto Los Cabos. Es EL evento de la semana.",
-      tags: [["especial","Festival"],["música","Música en Vivo"],["cultura","Cultural"]],
-      url: "https://www.vivaelgonzo.com"
-    },
-    {
-      priority: 1,
-      date: "Martes 5 · Todo el día",
-      icon: "🇲🇽",
-      title: "Cinco de Mayo — Celebraciones por Los Cabos",
-      venue: "Restaurantes y bares en Cabo San Lucas y San José",
-      mapsUrl: "https://maps.google.com/?q=Cabo+San+Lucas",
-      price: "$$",
-      reservation: false,
-      why: "El 5 de Mayo se celebra en restaurantes y bares de Los Cabos con tragos especiales, mariachis, comida tradicional y promociones temáticas. Buen plan martes — busquen los menús especiales en La Lupita, El Squid Roe, Cabo Wabo y Mi Casa.",
-      tags: [["especial","Tradición"],["cultura","Mexicano"],["gastronomía","Tradicional"]],
-      url: "https://www.visitloscabos.travel/events/"
-    },
-    {
-      priority: 2,
-      date: "Sábado 9 · Todo el día",
+      date: "Domingo 10 · Todo el día",
       icon: "💐",
-      title: "Pre-Mother's Day — Cenas Especiales por el 10 de Mayo",
+      title: "Día de las Madres — Brunchs y Cenas Especiales en Los Cabos",
       venue: "Restaurantes premium en todo Los Cabos",
       mapsUrl: "https://maps.google.com/?q=Los+Cabos+restaurants",
       price: "$$$",
       reservation: true,
-      why: "El 10 de Mayo es el Día de las Madres en México. El sábado 9 muchos restaurantes anuncian cenas especiales y brunchs para el domingo (Sora at Waldorf Astoria, Acre, Veleros Beach Club, Bagatelle). Reserven con anticipación si quieren llevar a alguien especial.",
+      why: "Es EL día — 10 de Mayo, Día de las Madres en México. Brunchs y cenas especiales en One&Only Palmilla, Hacienda Cocina, Mesa Madre (Tesoro Los Cabos), Sora at Waldorf Astoria, Bagatelle, Acre y Veleros Beach Club. Si todavía no reservaron, llamen ya — los buenos lugares se llenan rápido.",
       tags: [["especial","Día de las Madres"],["gastronomía","Fine Dining"]],
-      url: "https://www.visitloscabos.travel/event/mother%e2%80%99s-day-epic-breakfast/4077/"
+      url: "https://www.destinoloscabos.com/blog/food/opentables-mothers-day-restaurant-picks-in-los-cabos/"
     },
     {
-      priority: 2,
-      date: "Martes 5 · 5:00 PM",
-      icon: "🍜",
-      title: "Sabores San José — Corredor Gastronómico",
-      venue: "Centro Histórico, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Plaza+Mijares+San+Jose+del+Cabo",
+      priority: 1,
+      date: "Sábado 16 · 4:00 PM – 12:00 AM",
+      icon: "🍺",
+      title: "Cabo Beerfest 2026 — Primera Edición",
+      venue: "Multiplaza Los Cabos (Carr. Transpeninsular)",
+      mapsUrl: "https://maps.app.goo.gl/sLnwEaQ5MwibLFJK6",
       price: "$",
       reservation: false,
-      why: "El centro histórico se transforma en corredor gastronómico de 5 a 9 PM con productores locales, estaciones de degustación y presentaciones culturales. Esta semana coincide con el 5 de Mayo — ambiente extra festivo. Muy recomendado.",
-      tags: [["gastronomía","Gastronómico"],["cultura","Cultural"],["free","Gratis"]],
-      url: "https://www.visitloscabos.travel/events/"
+      why: "Festival inaugural de cerveza artesanal con marcas locales (Baja Brewing, Mr. Toro y más). Entrada GRATIS, ambiente festivo, comida y música en vivo de 4 PM a medianoche. Plan ideal para sábado — algo nuevo y diferente que vale la pena conocer.",
+      tags: [["especial","Festival"],["gastronomía","Cerveza"],["free","Gratis"]],
+      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
     },
     {
       priority: 2,
-      date: "Vie 8 – Sáb 9 · 6:00 PM",
+      date: "Hasta el 22 de mayo · 6:00 PM",
       icon: "🍢",
-      title: "One Week Only — Cocina Balinesa en Restaurant EQUIS",
+      title: "Semana de Cocina Balinesa en Restaurant EQUIS",
       venue: "Zadún Ritz-Carlton Reserve, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Zadun+Ritz+Carlton+Reserve+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Arranca la temporada de cocina balinesa de tiempo limitado en EQUIS del Zadún Ritz-Carlton (8 al 22 de mayo). Sabores auténticos del archipiélago indonesio en uno de los mejores resorts de la zona. Solo dos semanas — vale la pena reservar.",
+      why: "Sigue activa la temporada limitada de cocina balinesa en EQUIS del Zadún Ritz-Carlton (hasta el 22 de mayo). Sabores auténticos del archipiélago indonesio en uno de los resorts top de la zona. Última semana fuerte para reservar.",
       tags: [["gastronomía","Internacional"],["lujo","Fine Dining"],["especial","Tiempo limitado"]],
       url: "https://www.visitloscabos.travel/event/one-week-only-bali-cuisine-at-equis/3925/"
     },
     {
-      priority: 3,
-      date: "Martes 5 · Atardecer",
-      icon: "🌅",
-      title: "Moon Zipping Fire — UTVs al Atardecer + Tirolesas Nocturnas",
-      venue: "Wild Canyon Adventures",
-      mapsUrl: "https://maps.google.com/?q=Wild+Canyon+Adventures+Los+Cabos",
-      price: "$$",
+      priority: 2,
+      date: "Hasta el 25 de mayo",
+      icon: "🌸",
+      title: "Mes de las Madres — Hilton Los Cabos Beach & Golf Resort",
+      venue: "Hilton Los Cabos Beach & Golf Resort",
+      mapsUrl: "https://maps.google.com/?q=Hilton+Los+Cabos+Beach+Golf+Resort",
+      price: "$$$",
       reservation: true,
-      why: "Combo aventura diferente: UTVs al atardecer en el cañón + tirolesas en la noche con vista al mar. Si quieren algo distinto al nightlife convencional para celebrar el 5 de mayo en plan aventura, este es el plan.",
-      tags: [["aventura","Aventura"],["especial","Nocturno"]],
+      why: "El Hilton extendió la celebración del Día de las Madres todo el mes con menús especiales, spa packages y experiencias temáticas hasta el 25 de mayo. Si no alcanzaron a reservar el domingo 10, hay alternativas durante la semana.",
+      tags: [["especial","Día de las Madres"],["lujo","Resort"]],
       url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 2,
+      date: "Martes 12 · 5:00 PM – 9:00 PM",
+      icon: "🎨",
+      title: "Sabores San José — Corredor Gastronómico (Martes Cultural)",
+      venue: "Centro Histórico, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Plaza+Mijares+San+Jose+del+Cabo",
+      price: "$",
+      reservation: false,
+      why: "El centro histórico de San José se transforma en corredor gastronómico de 5 a 9 PM cada martes — productores locales, estaciones de degustación y presentaciones culturales. Plan económico y muy recomendado entre semana.",
+      tags: [["gastronomía","Gastronómico"],["cultura","Cultural"],["free","Gratis"]],
+      url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 3,
+      date: "Jueves 14 · 6:00 PM – 10:00 PM",
+      icon: "🖼️",
+      title: "Art Walk — Caminata del Arte en San José",
+      venue: "Distrito del Arte, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Art+District+San+Jose+del+Cabo",
+      price: "$",
+      reservation: false,
+      why: "El Art Walk de los jueves abre las galerías del distrito del arte de San José hasta tarde — ambiente local, música en vivo, comida callejera y arte de calidad. Plan tranquilo y cultural para empezar el fin de semana.",
+      tags: [["cultura","Art Walk"],["free","Gratis"]],
+      url: "https://www.facebook.com/jardindelarteloscabos"
     }
   ],
 
