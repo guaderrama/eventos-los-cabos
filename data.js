@@ -4,24 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 10–16 Mayo 2026",
-  weekDates:     "10 – 16 de Mayo, 2026",
-  generatedDate: "10 de Mayo, 2026",
+  weekLabel:     "Semana 17–23 Mayo 2026",
+  weekDates:     "17 – 23 de Mayo, 2026",
+  generatedDate: "17 de Mayo, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 15", emoji:"☁️", desc:"Nublado",              max:35, min:28, rain:0 },
-    { day:"Sáb 16", emoji:"☁️", desc:"Nublado",              max:35, min:24, rain:0 },
-    { day:"Dom 10", emoji:"🌧️", desc:"Lluvia ligera",        max:34, min:23, rain:0 },
-    { day:"Lun 11", emoji:"🌤️", desc:"Mayormente despejado", max:35, min:26, rain:2 }
+    { day:"Vie 22", emoji:"☁️", desc:"Nublado",              max:32, min:23, rain:7  },
+    { day:"Sáb 23", emoji:"☁️", desc:"Nublado",              max:30, min:22, rain:8  },
+    { day:"Dom 17", emoji:"☁️", desc:"Nublado",              max:31, min:21, rain:10 },
+    { day:"Lun 18", emoji:"🌤️", desc:"Mayormente despejado", max:30, min:20, rain:0  }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
-    { label:"Semana 12–18 Abr",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 19–25 Abr",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 26 Abr–2 May", url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 3–9 May",      url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 3–9 May",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 10–16 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -33,81 +33,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Domingo 10 · Todo el día",
-      icon: "💐",
-      title: "Día de las Madres — Brunchs y Cenas Especiales en Los Cabos",
-      venue: "Restaurantes premium en todo Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Los+Cabos+restaurants",
-      price: "$$$",
-      reservation: true,
-      why: "Es EL día — 10 de Mayo, Día de las Madres en México. Brunchs y cenas especiales en One&Only Palmilla, Hacienda Cocina, Mesa Madre (Tesoro Los Cabos), Sora at Waldorf Astoria, Bagatelle, Acre y Veleros Beach Club. Si todavía no reservaron, llamen ya — los buenos lugares se llenan rápido.",
-      tags: [["especial","Día de las Madres"],["gastronomía","Fine Dining"]],
-      url: "https://www.destinoloscabos.com/blog/food/opentables-mothers-day-restaurant-picks-in-los-cabos/"
+      date: "Vie 22 y Sáb 23 · 5:30 PM",
+      icon: "🎷",
+      title: "San José Jazz Weekend 2026 — 12ª Edición",
+      venue: "Zona Hotelera, frente a Plaza del Pescador, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Plaza+del+Pescador+San+Jose+del+Cabo",
+      price: "$",
+      reservation: false,
+      why: "EL evento de la semana. Festival cultural más emblemático del destino — 12ª edición con Chuchito Valdés (referente mundial del jazz afrocubano) como cabeza de cartel. 11 proyectos artísticos, +35 músicos, gastronomía y arte. ENTRADA GRATIS. Las calles de San José se transforman en escenario al aire libre.",
+      tags: [["especial","Festival"],["música","Jazz"],["free","Gratis"]],
+      url: "https://www.visitloscabos.travel/event/san-jose-jazz-weekend-festival-international-2026/4044/"
     },
     {
       priority: 1,
-      date: "Sábado 16 · 4:00 PM – 12:00 AM",
-      icon: "🍺",
-      title: "Cabo Beerfest 2026 — Primera Edición",
-      venue: "Multiplaza Los Cabos (Carr. Transpeninsular)",
-      mapsUrl: "https://maps.app.goo.gl/sLnwEaQ5MwibLFJK6",
-      price: "$",
-      reservation: false,
-      why: "Festival inaugural de cerveza artesanal con marcas locales (Baja Brewing, Mr. Toro y más). Entrada GRATIS, ambiente festivo, comida y música en vivo de 4 PM a medianoche. Plan ideal para sábado — algo nuevo y diferente que vale la pena conocer.",
-      tags: [["especial","Festival"],["gastronomía","Cerveza"],["free","Gratis"]],
-      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
+      date: "Vie 22 – Dom 24 · Todo el fin de semana",
+      icon: "🌅",
+      title: "Sunset Fest Cabo — Memorial Day Weekend",
+      venue: "Playa El Médano, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Playa+Medano+Cabo+San+Lucas",
+      price: "$$$",
+      reservation: true,
+      why: "Festival de yacht rock reagendado para Memorial Day weekend en la arena de Playa Médano. Cartel original con Rick Springfield, Ambrosia, Alan Parsons y otros (algunos confirmados, otros pendientes). Plan diferente: música suave en la playa al atardecer. Verificar lineup actualizado antes de comprar.",
+      tags: [["especial","Festival"],["música","Yacht Rock"]],
+      url: "https://sunsetfestcabo.com/"
     },
     {
       priority: 2,
-      date: "Hasta el 22 de mayo · 6:00 PM",
+      date: "Hasta el Vie 22 · 6:00 PM",
       icon: "🍢",
-      title: "Semana de Cocina Balinesa en Restaurant EQUIS",
+      title: "Última Semana — Cocina Balinesa en Restaurant EQUIS",
       venue: "Zadún Ritz-Carlton Reserve, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Zadun+Ritz+Carlton+Reserve+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Sigue activa la temporada limitada de cocina balinesa en EQUIS del Zadún Ritz-Carlton (hasta el 22 de mayo). Sabores auténticos del archipiélago indonesio en uno de los resorts top de la zona. Última semana fuerte para reservar.",
-      tags: [["gastronomía","Internacional"],["lujo","Fine Dining"],["especial","Tiempo limitado"]],
+      why: "ÚLTIMA SEMANA de la temporada limitada de cocina balinesa en EQUIS del Zadún Ritz-Carlton (cierra el viernes 22). Si no han ido, esta es la oportunidad final — sabores auténticos del archipiélago indonesio en uno de los resorts top.",
+      tags: [["gastronomía","Internacional"],["lujo","Fine Dining"],["especial","Última semana"]],
       url: "https://www.visitloscabos.travel/event/one-week-only-bali-cuisine-at-equis/3925/"
     },
     {
       priority: 2,
-      date: "Hasta el 25 de mayo",
+      date: "Hasta el Lun 25",
       icon: "🌸",
       title: "Mes de las Madres — Hilton Los Cabos Beach & Golf Resort",
       venue: "Hilton Los Cabos Beach & Golf Resort",
       mapsUrl: "https://maps.google.com/?q=Hilton+Los+Cabos+Beach+Golf+Resort",
       price: "$$$",
       reservation: true,
-      why: "El Hilton extendió la celebración del Día de las Madres todo el mes con menús especiales, spa packages y experiencias temáticas hasta el 25 de mayo. Si no alcanzaron a reservar el domingo 10, hay alternativas durante la semana.",
+      why: "Continúa la celebración extendida del Día de las Madres en el Hilton con menús especiales, spa packages y experiencias temáticas hasta el 25 de mayo. Buena alternativa para detalle entre semana o cierre del mes.",
       tags: [["especial","Día de las Madres"],["lujo","Resort"]],
       url: "https://www.visitloscabos.travel/events/"
     },
     {
       priority: 2,
-      date: "Martes 12 · 5:00 PM – 9:00 PM",
+      date: "Martes 19 · 5:00 PM – 9:00 PM",
       icon: "🎨",
       title: "Sabores San José — Corredor Gastronómico (Martes Cultural)",
       venue: "Centro Histórico, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Plaza+Mijares+San+Jose+del+Cabo",
       price: "$",
       reservation: false,
-      why: "El centro histórico de San José se transforma en corredor gastronómico de 5 a 9 PM cada martes — productores locales, estaciones de degustación y presentaciones culturales. Plan económico y muy recomendado entre semana.",
+      why: "El centro histórico de San José se transforma en corredor gastronómico — productores locales, estaciones de degustación y presentaciones culturales. Plan económico y muy recomendado entre semana, perfecto para calentar motores antes del Jazz Weekend.",
       tags: [["gastronomía","Gastronómico"],["cultura","Cultural"],["free","Gratis"]],
       url: "https://www.visitloscabos.travel/events/"
     },
     {
-      priority: 3,
-      date: "Jueves 14 · 6:00 PM – 10:00 PM",
+      priority: 2,
+      date: "Jueves 21 · 5:00 PM – 9:00 PM",
       icon: "🖼️",
       title: "Art Walk — Caminata del Arte en San José",
       venue: "Distrito del Arte, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Art+District+San+Jose+del+Cabo",
       price: "$",
       reservation: false,
-      why: "El Art Walk de los jueves abre las galerías del distrito del arte de San José hasta tarde — ambiente local, música en vivo, comida callejera y arte de calidad. Plan tranquilo y cultural para empezar el fin de semana.",
+      why: "Última semana fuerte del Art Walk antes del cierre de temporada (noviembre–junio). Calle Obregón se cierra al tráfico, +12 galerías abren con refrigerios, música en vivo y los artistas presentes. Plan cultural ideal previo al fin de semana del Jazz.",
       tags: [["cultura","Art Walk"],["free","Gratis"]],
-      url: "https://www.facebook.com/jardindelarteloscabos"
+      url: "https://www.artcabo.com/san-jose-del-cabo-art-walk.html"
     }
   ],
 
