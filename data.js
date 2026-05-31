@@ -4,24 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 24–30 Mayo 2026",
-  weekDates:     "24 – 30 de Mayo, 2026",
-  generatedDate: "24 de Mayo, 2026",
+  weekLabel:     "Semana 31 May–6 Jun 2026",
+  weekDates:     "31 de Mayo – 6 de Junio, 2026",
+  generatedDate: "31 de Mayo, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 29", emoji:"☁️", desc:"Nublado",              max:30, min:22, rain:2  },
-    { day:"Sáb 30", emoji:"🌧️", desc:"Lluvia ligera",        max:31, min:24, rain:8  },
-    { day:"Dom 24", emoji:"☁️", desc:"Nublado",              max:31, min:23, rain:0  },
-    { day:"Lun 25", emoji:"☁️", desc:"Nublado",              max:32, min:23, rain:0  }
+    { day:"Vie 5",  emoji:"☀️", desc:"Despejado",  max:31, min:20, rain:0  },
+    { day:"Sáb 6",  emoji:"☀️", desc:"Despejado",  max:29, min:18, rain:0  },
+    { day:"Dom 31", emoji:"☁️", desc:"Nublado",    max:32, min:23, rain:19 },
+    { day:"Lun 1",  emoji:"☁️", desc:"Nublado",    max:35, min:26, rain:0  }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
-    { label:"Semana 26 Abr–2 May", url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 3–9 May",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 10–16 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 17–23 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 17–23 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 24–30 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -33,62 +33,48 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Vie 29 y Sáb 30 · 5:00 PM – 10:00 PM",
-      icon: "🔥",
-      title: "Mezquite x Mar y Leña — Chef Takeover Germán Ghelfi",
-      venue: "Mar y Leña, Waldorf Astoria Los Cabos Pedregal",
-      mapsUrl: "https://maps.google.com/?q=Waldorf+Astoria+Los+Cabos+Pedregal",
-      price: "$$$",
-      reservation: true,
-      why: "EL evento de la semana. Solo 2 noches: el Chef Ejecutivo del Conrad Punta de Mita (Germán Ghelfi) hace takeover en Mar y Leña con cocina de leña y mezquite. Intercambio culinario entre destinos — experiencia única e irrepetible en uno de los restaurantes top de Pedregal.",
-      tags: [["especial","Chef Takeover"],["gastronomía","Fine Dining"],["lujo","Resort"]],
-      url: "https://www.visitloscabos.travel/event/mezquite-x-mar-y-le%c3%b1a/4133/"
+      date: "Viernes 5 · 6:00 PM",
+      icon: "🎨",
+      title: "PORTAL — Mercado Creativo en Crania",
+      venue: "Crania Cabo (Cate & Air Disco), San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos+San+Jose+del+Cabo",
+      price: "$$",
+      reservation: false,
+      why: "EL evento de la semana. Crania reinventa su espacio como hub cultural: en lugar de pista de baile, un mercado creativo con artistas y emprendedores locales de Los Cabos. Única edición — arte, conexión y comunidad bajo la icónica estructura de grúas. Plan diferente para empezar el fin de semana.",
+      tags: [["especial","Mercado Creativo"],["cultura","Local Artists"]],
+      url: "https://www.cabo.party/event/portal-crania-los-cabos-05-june-2026"
     },
     {
       priority: 1,
-      date: "Domingo 24 (HOY) · 11:00 AM – 3:00 PM",
-      icon: "🌸",
-      title: "Sunday Bloom Brunch — Flower Harvest con Rosé Bar",
+      date: "Sábado 6 · 9:00 PM",
+      icon: "🎧",
+      title: "METRIKA (live) en Crania — DJ Set Especial",
+      venue: "Crania Cabo (Cate & Air Disco), San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos+San+Jose+del+Cabo",
+      price: "$$$",
+      reservation: true,
+      why: "Set en vivo del productor mexicano Metrika, con line-up de DJs ERIKKU, ROSANO (residente Papaya Playa Project, Tulum) y ADDIE. Una sola noche — Crania es EL lugar con mejor curaduría musical de Los Cabos. +21, ID obligatorio.",
+      tags: [["música","DJ Set"],["especial","Live"],["nightlife","Techno House"]],
+      url: "https://www.cabo.party/event/dj-set-crania-los-cabos-06-june-2026"
+    },
+    {
+      priority: 2,
+      date: "Lunes 1 · 5:00 PM – 10:30 PM",
+      icon: "🍝",
+      title: "Pasta Nights at Palmerio — Estreno de Temporada",
       venue: "Palmerio, Four Seasons Cabo Del Sol",
       mapsUrl: "https://maps.google.com/?q=Four+Seasons+Resort+Cabo+Del+Sol",
       price: "$$$",
       reservation: true,
-      why: "Brunch insignia de temporada con cosecha floral y Rosé Bar dedicado. Estaciones en vivo: raw bar, parrilla Baja, pizzas al horno de leña, mimosas y spritz ilimitados, sala de postres del Chef Guillermo. Música en vivo y actividades para niños. $1,900 MXN p/p — el brunch dominical más completo del corredor.",
-      tags: [["gastronomía","Brunch"],["especial","Temporada"],["lujo","Fine Dining"]],
-      url: "https://www.visitloscabos.travel/event/sunday-bloom-brunch%3a-a-flower-harvest-celebration-with-ros%c3%a9/3881/"
+      why: "Arranca la temporada de Pasta Nights en Palmerio (Four Seasons Cabo Del Sol). Cada lunes pasta fresca hecha a mano: cada forma rellenada o cortada al momento, con salsas balanceadas. Plan ideal para inaugurar la semana — corre hasta el 29 de junio.",
+      tags: [["gastronomía","Italiana"],["lujo","Fine Dining"],["especial","Estreno"]],
+      url: "https://www.visitloscabos.travel/event/pasta-nights-at-palmerio/3830/"
     },
     {
       priority: 2,
-      date: "Hasta el Lun 25",
-      icon: "💐",
-      title: "Últimos Días — Mes de las Madres en Hilton Los Cabos",
-      venue: "Hilton Los Cabos Beach & Golf Resort",
-      mapsUrl: "https://maps.google.com/?q=Hilton+Los+Cabos+Beach+Golf+Resort",
-      price: "$$$",
-      reservation: true,
-      why: "ÚLTIMOS DÍAS de la celebración extendida del Día de las Madres en el Hilton — cierra el lunes 25. Si no han ido, esta semana es la última oportunidad: menús especiales, spa packages y experiencias temáticas. Coincide con Memorial Day weekend (USA).",
-      tags: [["especial","Día de las Madres"],["lujo","Resort"]],
-      url: "https://www.visitloscabos.travel/event/mes-de-las-madres/4093/"
-    },
-    {
-      priority: 2,
-      date: "Sábado 30 · 8:00 PM",
-      icon: "🎤",
-      title: "Own The Stage — Karaoke en vivo con banda",
-      venue: "Corazón Beach Club, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Corazon+Beach+Club+Cabo+San+Lucas",
-      price: "$",
-      reservation: false,
-      why: "Sin cover. Plan diferente para cerrar el fin de semana: toma el micrófono y canta tus rolas favoritas respaldado por banda en vivo, frente al mar en Playa Médano. 2x1 en cocteles con Tequila Dobel toda la noche. Ambiente vibrante y muy local.",
-      tags: [["música","Karaoke"],["especial","Live Band"],["free","Sin cover"]]
-,
-      url: "https://www.visitloscabos.travel/event/own-the-stage/4140/"
-    },
-    {
-      priority: 2,
-      date: "Miércoles 27 · 5:30 PM – 9:00 PM",
+      date: "Miércoles 3 · 5:30 PM – 9:00 PM",
       icon: "✨",
-      title: "México Mágico — Cena temática semanal",
+      title: "México Mágico — Cena temática en One&Only",
       venue: "Agua, One&Only Palmilla",
       mapsUrl: "https://maps.google.com/?q=One+and+Only+Palmilla+San+Jose+del+Cabo",
       price: "$$$",
@@ -99,16 +85,29 @@ const WEEKLY_DATA = {
     },
     {
       priority: 2,
-      date: "Jueves 28 · 5:00 PM – 9:00 PM",
+      date: "Jueves 4 · 5:00 PM – 9:00 PM",
       icon: "🖼️",
       title: "Art Walk — Caminata del Arte en San José",
       venue: "Distrito del Arte, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Art+District+San+Jose+del+Cabo",
       price: "$",
       reservation: false,
-      why: "Continúa el Art Walk en su recta final de temporada (cierra en junio). Calle Obregón se cierra al tráfico, +12 galerías abren con refrigerios, música en vivo y los artistas presentes. Plan cultural gratis y muy de la zona.",
+      why: "Recta final del Art Walk — la temporada cierra a finales de junio. Calle Obregón se cierra al tráfico, +12 galerías abren con refrigerios, música en vivo y artistas presentes. Plan cultural gratis y muy de la zona. Si no han ido este año, esta es de las últimas oportunidades.",
       tags: [["cultura","Art Walk"],["free","Gratis"]],
       url: "https://www.artcabo.com/san-jose-del-cabo-art-walk.html"
+    },
+    {
+      priority: 3,
+      date: "Jueves 4 · 12:30 PM – 4:00 PM",
+      icon: "🥂",
+      title: "Thursday Drunch at Sora — Brunch + Cocteles",
+      venue: "Sora, Four Seasons Cabo Del Sol",
+      mapsUrl: "https://maps.google.com/?q=Four+Seasons+Resort+Cabo+Del+Sol",
+      price: "$$$",
+      reservation: true,
+      why: "Brunch tarde + cocteles ('drunch') solo los jueves en Sora, dentro del Four Seasons Cabo Del Sol. Vista al mar, estaciones en vivo y mixología premium. Plan ideal para extender el almuerzo en pareja entre semana.",
+      tags: [["gastronomía","Brunch"],["lujo","Resort"]],
+      url: "https://www.visitloscabos.travel/event/thursday-drunch-at-sora/3587/"
     }
   ],
 
