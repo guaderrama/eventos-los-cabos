@@ -4,24 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 31 May–6 Jun 2026",
-  weekDates:     "31 de Mayo – 6 de Junio, 2026",
-  generatedDate: "31 de Mayo, 2026",
+  weekLabel:     "Semana 7–13 Jun 2026",
+  weekDates:     "7 – 13 de Junio, 2026",
+  generatedDate: "7 de Junio, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 5",  emoji:"☀️", desc:"Despejado",  max:31, min:20, rain:0  },
-    { day:"Sáb 6",  emoji:"☀️", desc:"Despejado",  max:29, min:18, rain:0  },
-    { day:"Dom 31", emoji:"☁️", desc:"Nublado",    max:32, min:23, rain:19 },
-    { day:"Lun 1",  emoji:"☁️", desc:"Nublado",    max:35, min:26, rain:0  }
+    { day:"Vie 12", emoji:"🌤️", desc:"Mayormente despejado", max:28, min:20, rain:0 },
+    { day:"Sáb 13", emoji:"☁️", desc:"Nublado",              max:29, min:21, rain:0 },
+    { day:"Dom 7",  emoji:"☀️", desc:"Despejado",            max:27, min:17, rain:0 },
+    { day:"Lun 8",  emoji:"🌤️", desc:"Mayormente despejado", max:27, min:18, rain:0 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
-    { label:"Semana 3–9 May",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 10–16 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 17–23 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 24–30 May",    url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 31 May–6 Jun",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 24–30 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 17–23 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 10–16 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -33,81 +33,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Viernes 5 · 6:00 PM",
-      icon: "🎨",
-      title: "PORTAL — Mercado Creativo en Crania",
-      venue: "Crania Cabo (Cate & Air Disco), San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos+San+Jose+del+Cabo",
+      date: "Jueves 11 · 11:30 AM",
+      icon: "⚽",
+      title: "Inauguración Mundial 2026 — Watch Party México vs Sudáfrica",
+      venue: "Hacienda Cocina & Cantina, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Hacienda+Cocina+y+Cantina+Cabo+San+Lucas",
       price: "$$",
-      reservation: false,
-      why: "EL evento de la semana. Crania reinventa su espacio como hub cultural: en lugar de pista de baile, un mercado creativo con artistas y emprendedores locales de Los Cabos. Única edición — arte, conexión y comunidad bajo la icónica estructura de grúas. Plan diferente para empezar el fin de semana.",
-      tags: [["especial","Mercado Creativo"],["cultura","Local Artists"]],
-      url: "https://www.cabo.party/event/portal-crania-los-cabos-05-june-2026"
+      reservation: true,
+      why: "EL momento del año: arranca el Mundial 2026 y México juega el partido inaugural. Watch party frente a la Marina con pantallas, comida y bebidas. Pasa solo cada 4 años y México es anfitrión — plan obligado para vivir la fiesta mundialista. Llega temprano, se llena.",
+      tags: [["especial","Mundial 2026"],["deporte","Fútbol"]],
+      url: "https://www.visitloscabos.travel/event/watch-party-the-opening-match/4206/"
     },
     {
       priority: 1,
-      date: "Sábado 6 · 9:00 PM",
+      date: "Sábado 13 · 9:00 PM",
       icon: "🎧",
-      title: "METRIKA (live) en Crania — DJ Set Especial",
+      title: "CABIZBAJO en Crania — Noche de Techno Underground",
       venue: "Crania Cabo (Cate & Air Disco), San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Set en vivo del productor mexicano Metrika, con line-up de DJs ERIKKU, ROSANO (residente Papaya Playa Project, Tulum) y ADDIE. Una sola noche — Crania es EL lugar con mejor curaduría musical de Los Cabos. +21, ID obligatorio.",
-      tags: [["música","DJ Set"],["especial","Live"],["nightlife","Techno House"]],
-      url: "https://www.cabo.party/event/dj-set-crania-los-cabos-06-june-2026"
+      why: "Set en vivo de Cabizbajo, productor del underground mexicano conocido por su bassline futurista y techno profundo, acompañado de Naborm, Ju Bodenstedt y Johann. Una sola noche bajo las icónicas grúas — Crania es EL lugar con mejor curaduría musical de Los Cabos. +21, ID obligatorio.",
+      tags: [["música","DJ Set"],["nightlife","Techno"],["especial","Live"]],
+      url: "https://www.cabo.party/event/dj-set-crania-los-cabos-13-june-2026"
     },
     {
       priority: 2,
-      date: "Lunes 1 · 5:00 PM – 10:30 PM",
-      icon: "🍝",
-      title: "Pasta Nights at Palmerio — Estreno de Temporada",
-      venue: "Palmerio, Four Seasons Cabo Del Sol",
-      mapsUrl: "https://maps.google.com/?q=Four+Seasons+Resort+Cabo+Del+Sol",
-      price: "$$$",
+      date: "Sábado 13 · 8:00 AM",
+      icon: "🧘",
+      title: "Global Wellness Day — Yoga & Sound Healing en Casa Dorada",
+      venue: "Terraza 12 Tribes, Casa Dorada, Playa El Médano",
+      mapsUrl: "https://maps.google.com/?q=Casa+Dorada+Los+Cabos+Playa+El+Medano",
+      price: "$",
       reservation: true,
-      why: "Arranca la temporada de Pasta Nights en Palmerio (Four Seasons Cabo Del Sol). Cada lunes pasta fresca hecha a mano: cada forma rellenada o cortada al momento, con salsas balanceadas. Plan ideal para inaugurar la semana — corre hasta el 29 de junio.",
-      tags: [["gastronomía","Italiana"],["lujo","Fine Dining"],["especial","Estreno"]],
-      url: "https://www.visitloscabos.travel/event/pasta-nights-at-palmerio/3830/"
+      why: "Día Mundial del Bienestar frente al mar en El Médano: sesión de yoga gratis al amanecer, seguida de sound healing ($5 USD) y 20% de descuento en desayuno en Maydán. Plan diferente y relajante para empezar el sábado en pareja. Cupo limitado.",
+      tags: [["bienestar","Yoga"],["especial","Global Wellness Day"]],
+      url: "https://www.visitloscabos.travel/event/global-wellness-day-in-los-cabos%3a-yoga-%26-sound-healing-at-casa-dorada/4130/"
     },
     {
       priority: 2,
-      date: "Miércoles 3 · 5:30 PM – 9:00 PM",
+      date: "Miércoles 10 · 5:30 PM",
       icon: "✨",
       title: "México Mágico — Cena temática en One&Only",
-      venue: "Agua, One&Only Palmilla",
+      venue: "Agua, One&Only Palmilla, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=One+and+Only+Palmilla+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Cena temática mexicana frente al Mar de Cortés en One&Only Palmilla: cocina mexicana curada, música en vivo, colores vibrantes y mixología elevada. $1,556 MXN adultos / $982 niños. Plan entre semana para sentirse en otro mundo sin salir del corredor.",
+      why: "Cena temática mexicana frente al Mar de Cortés en One&Only Palmilla: cocina mexicana curada, música en vivo, colores vibrantes y mixología elevada ($1,556 MXN adultos / $982 niños). Plan entre semana para sentirse en otro mundo sin salir del corredor.",
       tags: [["gastronomía","Mexicana"],["lujo","Fine Dining"],["cultura","Temática"]],
       url: "https://www.visitloscabos.travel/event/m%c3%89xico-m%c3%81gico/3846/"
     },
     {
       priority: 2,
-      date: "Jueves 4 · 5:00 PM – 9:00 PM",
-      icon: "🖼️",
-      title: "Art Walk — Caminata del Arte en San José",
-      venue: "Distrito del Arte, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Art+District+San+Jose+del+Cabo",
-      price: "$",
-      reservation: false,
-      why: "Recta final del Art Walk — la temporada cierra a finales de junio. Calle Obregón se cierra al tráfico, +12 galerías abren con refrigerios, música en vivo y artistas presentes. Plan cultural gratis y muy de la zona. Si no han ido este año, esta es de las últimas oportunidades.",
-      tags: [["cultura","Art Walk"],["free","Gratis"]],
-      url: "https://www.artcabo.com/san-jose-del-cabo-art-walk.html"
+      date: "Miércoles 10 · 8:00 PM",
+      icon: "🎷",
+      title: "Daline Jones & The Diego Ramírez Trio — Jazz en Vivo",
+      venue: "Jazz on the Rocks, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Jazz+on+the+Rocks+San+Jose+del+Cabo",
+      price: "$$",
+      reservation: true,
+      why: "Cada miércoles, la potente voz de Daline Jones acompañada del trío de Diego Ramírez en el mejor escenario de jazz de San José. Noche íntima de música en vivo y buena cocina — plan tranquilo y elegante para mitad de semana.",
+      tags: [["música","Jazz"],["especial","Live"]],
+      url: "https://www.visitloscabos.travel/event/daline-jones-%26-the-diego-ram%c3%8drez-trio/1943/"
     },
     {
       priority: 3,
-      date: "Jueves 4 · 12:30 PM – 4:00 PM",
-      icon: "🥂",
-      title: "Thursday Drunch at Sora — Brunch + Cocteles",
-      venue: "Sora, Four Seasons Cabo Del Sol",
+      date: "Lunes 8 · 5:00 PM – 10:30 PM",
+      icon: "🍝",
+      title: "Pasta Nights at Palmerio — Últimas semanas",
+      venue: "Palmerio, Four Seasons Cabo Del Sol",
       mapsUrl: "https://maps.google.com/?q=Four+Seasons+Resort+Cabo+Del+Sol",
       price: "$$$",
       reservation: true,
-      why: "Brunch tarde + cocteles ('drunch') solo los jueves en Sora, dentro del Four Seasons Cabo Del Sol. Vista al mar, estaciones en vivo y mixología premium. Plan ideal para extender el almuerzo en pareja entre semana.",
-      tags: [["gastronomía","Brunch"],["lujo","Resort"]],
-      url: "https://www.visitloscabos.travel/event/thursday-drunch-at-sora/3587/"
+      why: "Cada lunes, pasta fresca hecha a mano en Palmerio (Four Seasons Cabo Del Sol): cada forma rellenada o cortada al momento, con salsas balanceadas. La temporada cierra el 29 de junio — quedan pocas oportunidades para arrancar la semana diferente.",
+      tags: [["gastronomía","Italiana"],["lujo","Fine Dining"]],
+      url: "https://www.visitloscabos.travel/event/pasta-nights-at-palmerio/3830/"
     }
   ],
 
