@@ -4,24 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 21–27 Jun 2026",
-  weekDates:     "21 – 27 de Junio, 2026",
-  generatedDate: "21 de Junio, 2026",
+  weekLabel:     "Semana 28 Jun–4 Jul 2026",
+  weekDates:     "28 de Junio – 4 de Julio, 2026",
+  generatedDate: "28 de Junio, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 26", emoji:"🌤️", desc:"Mayormente despejado", max:33, min:25, rain:2 },
-    { day:"Sáb 27", emoji:"☀️", desc:"Despejado",            max:35, min:26, rain:2 },
-    { day:"Dom 21", emoji:"☁️", desc:"Nublado",              max:33, min:25, rain:16 },
-    { day:"Lun 22", emoji:"☁️", desc:"Nublado",              max:31, min:24, rain:2 }
+    { day:"Vie 3",  emoji:"☁️", desc:"Nublado",              max:34, min:26, rain:10 },
+    { day:"Sáb 4",  emoji:"☁️", desc:"Nublado",              max:33, min:25, rain:0 },
+    { day:"Dom 28", emoji:"☀️", desc:"Despejado",            max:35, min:27, rain:0 },
+    { day:"Lun 29", emoji:"☁️", desc:"Nublado",              max:36, min:27, rain:4 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 31 May–6 Jun",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 24–30 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 17–23 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 24–30 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -33,81 +33,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Miércoles 24 · México juega",
-      icon: "⚽",
-      title: "Mundial 2026 — México cierra fase de grupos (Watch Party)",
-      venue: "Palmilla Football Lounge, One&Only Palmilla",
-      mapsUrl: "https://maps.google.com/?q=One+and+Only+Palmilla+San+Jose+del+Cabo",
+      date: "Sábado 4 · 5:30 PM",
+      icon: "🎆",
+      title: "4th of July by the Sea en Zadún — Cena con fuegos artificiales",
+      venue: "Playa Equis, Zadún (a Ritz-Carlton Reserve), San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Zadun+Ritz+Carlton+Reserve+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Semana decisiva del Mundial: el miércoles México juega su último partido de fase de grupos en el Estadio Azteca y todo se define. El Palmilla Football Lounge (One&Only) transmite cada partido en pantalla grande de 9 AM a 10 PM, con ambiente de celebración frente al mar. Siendo México país anfitrión, es el plan del verano — reserva con anticipación.",
-      tags: [["especial","Mundial 2026"],["deporte","Fútbol"]],
-      url: "https://www.visitloscabos.travel/event/palmilla-football-lounge/4144/"
+      why: "El plan grande de la semana: el 4 de Julio cae sábado y Zadún lo celebra frente al mar en Playa Equis. Parrilla americana, cocteles de autor, música country en vivo y un espectáculo de fuegos artificiales sobre la bahía. De 5:30 a 9:00 PM, entre el desierto y el Mar de Cortés — el cierre de semana más espectacular. Requiere reservación.",
+      tags: [["especial","4th of July"],["gastronomía","Cena & Fuegos"]],
+      url: "https://www.visitloscabos.travel/event/celebrate-the-4th-of-july-by-the-sea-at-zad%C3%9An/4277/"
     },
     {
       priority: 1,
-      date: "Sábado 27 · 9:00 PM",
+      date: "Sábado 4 · 9:00 PM",
       icon: "🎧",
-      title: "Darshan Jesrani en Crania — Noche de House & Disco",
+      title: "Tomas Station en Crania — DJ set para cerrar el 4 de Julio",
       venue: "Crania Cabo (Cate & Air Disco), San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Una sola noche: Darshan Jesrani —cofundador de Metro Area y referente del house y el disco de Nueva York— toca en vivo bajo las icónicas grúas de Crania, el lugar con mejor curaduría musical de Los Cabos. Set íntimo y bailable para cerrar la semana diferente. +21, ID obligatorio.",
+      why: "Para quien quiere seguir la noche del 4 de Julio bailando: Tomas Station toca en vivo bajo las icónicas grúas de Crania, el lugar con mejor curaduría musical de Los Cabos. Una sola noche, set íntimo y bailable de house y disco. +21, ID obligatorio.",
       tags: [["música","DJ Set"],["nightlife","House"],["especial","Live"]],
-      url: "https://www.cabo.party/event/dj-set-crania-los-cabos-27-june-2026"
+      url: "https://www.cabo.party/event/dj-set-crania-los-cabos-04-july-2026"
     },
     {
       priority: 2,
-      date: "Domingo 21 · 6:00 PM",
-      icon: "🔥",
-      title: "Día del Padre en Humo — Cena al fuego en Zadún",
-      venue: "Humo, Zadún (a Ritz-Carlton Reserve), San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Zadun+Ritz+Carlton+Reserve+San+Jose+del+Cabo",
+      date: "Sábado 4 · 1:00 PM",
+      icon: "🇺🇸",
+      title: "4th of July en Corazón — Beach Club & Rooftop 360 (Médano)",
+      venue: "Corazón Cabo Resort, El Médano, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Corazon+Cabo+Resort+El+Medano+Cabo+San+Lucas",
+      price: "$$",
+      reservation: true,
+      why: "La opción accesible y en pleno Médano: BBQ rojo, blanco y azul en el beach club desde la 1 PM (sin cover, solo consumo) y arriba, Rooftop 360 con violín en vivo (6–8 PM) y DJ hasta las 2 AM. El mejor punto para ver los fuegos artificiales sobre la bahía de Cabo San Lucas. Reserva tu mesa.",
+      tags: [["especial","4th of July"],["nightlife","Rooftop & Beach"]],
+      url: "https://www.corazoncabo.com/cabo-4th-of-july/"
+    },
+    {
+      priority: 2,
+      date: "Jueves 2 · Por la noche",
+      icon: "🍽️",
+      title: "Festival of Flavors con el chef Roberto Alcocer en Mako",
+      venue: "Mako, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Mako+Restaurant+Cabo+San+Lucas",
       price: "$$$",
       reservation: true,
-      why: "Día del Padre en Humo: menú especial cocinado al fuego, música en vivo y un puro de cortesía en el entorno íntimo de Zadún, entre el desierto y el mar. $3,240 MXN por persona, de 6:00 a 10:30 PM. Plan redondo para celebrar a papá hoy mismo — requiere reservación.",
-      tags: [["gastronomía","Fuego"],["especial","Día del Padre"]],
-      url: "https://www.visitloscabos.travel/event/fathers-day-at-humo/4261/"
+      why: "Noche gastronómica de autor: Mako recibe al chef Roberto Alcocer —estrella Michelin con Malva en el Valle de Guadalupe— para un menú especial frente al mar. Plan ideal entre semana para una cena diferente y de alto nivel. Cupo limitado, requiere reservación.",
+      tags: [["gastronomía","Chef invitado"],["especial","Festival"]],
+      url: "https://www.visitloscabos.travel/event/festival-of-flavors-with-chef-roberto-alcocer/4134/"
     },
     {
       priority: 2,
-      date: "Domingo 21 · 5:00 PM",
-      icon: "🌈",
-      title: "Pride Week — 'Puti Sunday' en Bar Ligaya",
-      venue: "Bar Ligaya, Álvaro Obregón 2106, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Bar+Ligaya+San+Jose+del+Cabo",
-      price: "$",
-      reservation: false,
-      why: "Gran cierre del Pride Week en Bar Ligaya, sobre Álvaro Obregón: desde las 5 PM con artistas y drags queer de México, DJ Chido Ninja y photo booth. Entrada libre (consumo mínimo). Tarde de comunidad, música y color para algo totalmente distinto en el Centro.",
-      tags: [["especial","Pride"],["nightlife","Drag & DJ"]],
-      url: "https://www.visitloscabos.travel/event/pride-week-at-bar-ligaya/4255/"
-    },
-    {
-      priority: 2,
-      date: "Miércoles 24 · 7:00 PM",
-      icon: "💃",
-      title: "Gipsy Nights — Cena con Flamenco en vivo (Alebrije Flamenco)",
-      venue: "Hotel El Ganzo, La Playita, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Hotel+El+Ganzo+La+Playita+San+Jose+del+Cabo",
+      date: "Toda la semana · México juega",
+      icon: "⚽",
+      title: "Mundial 2026 — Ronda eliminatoria (Watch Party)",
+      venue: "Palmilla Football Lounge, One&Only Palmilla, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=One+and+Only+Palmilla+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Noche flamenca en Hotel El Ganzo: cena con música y baile flamenco en vivo de Alebrije Flamenco, sabores de España y el ambiente bohemio que distingue al Ganzo. De 7:00 a 9:00 PM, estrena temporada este miércoles. Plan cultural y romántico entre semana — requiere reservación.",
-      tags: [["música","Flamenco"],["cultura","En vivo"]],
-      url: "https://www.visitloscabos.travel/event/gipsy-nights-w-alebrije-flamenco/4290/"
+      why: "Semana de octavos y cuartos de final del Mundial 2026, con México como país anfitrión: todo se define. El Palmilla Football Lounge transmite cada partido en pantalla grande frente al mar, con ambiente de celebración. El mejor lugar para vivir la fase decisiva — reserva con anticipación.",
+      tags: [["especial","Mundial 2026"],["deporte","Fútbol"]],
+      url: "https://www.visitloscabos.travel/event/palmilla-football-lounge/4144/"
     },
     {
       priority: 3,
-      date: "Jueves 25 · 7:00 PM",
-      icon: "✨",
-      title: "Lavish Burlesque — Show bajo la luna en el rooftop",
-      venue: "The Rooftop 360°, El Médano, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=The+Rooftop+360+Los+Cabos",
+      date: "Miércoles 1 · 7:30 PM",
+      icon: "🎷",
+      title: "Daline Jones & The Diego Ramírez Trio — Jazz en vivo",
+      venue: "Jazz on the Rocks, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Jazz+on+the+Rocks+San+Jose+del+Cabo",
       price: "$$",
-      reservation: true,
-      why: "Show de burlesque bajo la luna en The Rooftop 360° de El Médano: performance en vivo, cocteles de autor y lounges VIP con vista panorámica a la bahía. Solo adultos, desde las 7 PM. Una noche elegante y diferente para el jueves.",
-      tags: [["espectáculo","Burlesque"],["nightlife","Rooftop"]],
-      url: "https://www.visitloscabos.travel/event/lavish-burlesque/3902/"
+      reservation: false,
+      why: "Noche de jazz y soul con la vocalista Daline Jones acompañada del Diego Ramírez Trio en el clásico Jazz on the Rocks. Plan tranquilo y musical a media semana, en el corazón de San José. Llega temprano para buen lugar.",
+      tags: [["música","Jazz en vivo"],["cultura","Concierto"]],
+      url: "https://www.visitloscabos.travel/event/daline-jones-%26-the-diego-ram%C3%8Drez-trio/1943/"
     }
   ],
 
