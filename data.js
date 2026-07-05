@@ -4,20 +4,21 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 28 Jun–4 Jul 2026",
-  weekDates:     "28 de Junio – 4 de Julio, 2026",
-  generatedDate: "28 de Junio, 2026",
+  weekLabel:     "Semana 5–11 Jul 2026",
+  weekDates:     "5 – 11 de Julio, 2026",
+  generatedDate: "5 de Julio, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 3",  emoji:"☁️", desc:"Nublado",              max:34, min:26, rain:10 },
-    { day:"Sáb 4",  emoji:"☁️", desc:"Nublado",              max:33, min:25, rain:0 },
-    { day:"Dom 28", emoji:"☀️", desc:"Despejado",            max:35, min:27, rain:0 },
-    { day:"Lun 29", emoji:"☁️", desc:"Nublado",              max:36, min:27, rain:4 }
+    { day:"Vie 10", emoji:"🌧️", desc:"Lluvia ligera",         max:32, min:25, rain:32 },
+    { day:"Sáb 11", emoji:"🌧️", desc:"Lluvia ligera",         max:31, min:26, rain:45 },
+    { day:"Dom 5",  emoji:"🌤️", desc:"Mayormente despejado",  max:34, min:26, rain:0 },
+    { day:"Lun 6",  emoji:"🌤️", desc:"Mayormente despejado",  max:32, min:25, rain:0 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 28 Jun–4 Jul",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 31 May–6 Jun",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
@@ -33,72 +34,72 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Sábado 4 · 5:30 PM",
-      icon: "🎆",
-      title: "4th of July by the Sea en Zadún — Cena con fuegos artificiales",
-      venue: "Playa Equis, Zadún (a Ritz-Carlton Reserve), San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Zadun+Ritz+Carlton+Reserve+San+Jose+del+Cabo",
-      price: "$$$",
-      reservation: true,
-      why: "El plan grande de la semana: el 4 de Julio cae sábado y Zadún lo celebra frente al mar en Playa Equis. Parrilla americana, cocteles de autor, música country en vivo y un espectáculo de fuegos artificiales sobre la bahía. De 5:30 a 9:00 PM, entre el desierto y el Mar de Cortés — el cierre de semana más espectacular. Requiere reservación.",
-      tags: [["especial","4th of July"],["gastronomía","Cena & Fuegos"]],
-      url: "https://www.visitloscabos.travel/event/celebrate-the-4th-of-july-by-the-sea-at-zad%C3%9An/4277/"
-    },
-    {
-      priority: 1,
-      date: "Sábado 4 · 9:00 PM",
-      icon: "🎧",
-      title: "Tomas Station en Crania — DJ set para cerrar el 4 de Julio",
-      venue: "Crania Cabo (Cate & Air Disco), San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Crania+Los+Cabos+San+Jose+del+Cabo",
-      price: "$$$",
-      reservation: true,
-      why: "Para quien quiere seguir la noche del 4 de Julio bailando: Tomas Station toca en vivo bajo las icónicas grúas de Crania, el lugar con mejor curaduría musical de Los Cabos. Una sola noche, set íntimo y bailable de house y disco. +21, ID obligatorio.",
-      tags: [["música","DJ Set"],["nightlife","House"],["especial","Live"]],
-      url: "https://www.cabo.party/event/dj-set-crania-los-cabos-04-july-2026"
-    },
-    {
-      priority: 2,
-      date: "Sábado 4 · 1:00 PM",
-      icon: "🇺🇸",
-      title: "4th of July en Corazón — Beach Club & Rooftop 360 (Médano)",
-      venue: "Corazón Cabo Resort, El Médano, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Corazon+Cabo+Resort+El+Medano+Cabo+San+Lucas",
-      price: "$$",
-      reservation: true,
-      why: "La opción accesible y en pleno Médano: BBQ rojo, blanco y azul en el beach club desde la 1 PM (sin cover, solo consumo) y arriba, Rooftop 360 con violín en vivo (6–8 PM) y DJ hasta las 2 AM. El mejor punto para ver los fuegos artificiales sobre la bahía de Cabo San Lucas. Reserva tu mesa.",
-      tags: [["especial","4th of July"],["nightlife","Rooftop & Beach"]],
-      url: "https://www.corazoncabo.com/cabo-4th-of-july/"
-    },
-    {
-      priority: 2,
-      date: "Jueves 2 · Por la noche",
-      icon: "🍽️",
-      title: "Festival of Flavors con el chef Roberto Alcocer en Mako",
-      venue: "Mako, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Mako+Restaurant+Cabo+San+Lucas",
-      price: "$$$",
-      reservation: true,
-      why: "Noche gastronómica de autor: Mako recibe al chef Roberto Alcocer —estrella Michelin con Malva en el Valle de Guadalupe— para un menú especial frente al mar. Plan ideal entre semana para una cena diferente y de alto nivel. Cupo limitado, requiere reservación.",
-      tags: [["gastronomía","Chef invitado"],["especial","Festival"]],
-      url: "https://www.visitloscabos.travel/event/festival-of-flavors-with-chef-roberto-alcocer/4134/"
-    },
-    {
-      priority: 2,
-      date: "Toda la semana · México juega",
+      date: "Jue 9 – Sáb 11 · Cuartos de Final",
       icon: "⚽",
-      title: "Mundial 2026 — Ronda eliminatoria (Watch Party)",
+      title: "Mundial 2026 — Semana decisiva: octavos y cuartos de final",
       venue: "Palmilla Football Lounge, One&Only Palmilla, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=One+and+Only+Palmilla+San+Jose+del+Cabo",
       price: "$$$",
       reservation: true,
-      why: "Semana de octavos y cuartos de final del Mundial 2026, con México como país anfitrión: todo se define. El Palmilla Football Lounge transmite cada partido en pantalla grande frente al mar, con ambiente de celebración. El mejor lugar para vivir la fase decisiva — reserva con anticipación.",
+      why: "La semana más intensa del Mundial: los últimos octavos se juegan de domingo a martes y los cuartos de final de jueves a sábado (9, 10 y 11 de julio). El Palmilla Football Lounge transmite cada partido en pantalla grande frente al mar — el mejor lugar de Los Cabos para vivir la fase donde todo se define. Reserva con anticipación.",
       tags: [["especial","Mundial 2026"],["deporte","Fútbol"]],
       url: "https://www.visitloscabos.travel/event/palmilla-football-lounge/4144/"
     },
     {
+      priority: 1,
+      date: "Sábado 11 · 7:00 AM–3:00 PM",
+      icon: "🎣",
+      title: "Cabo Queens — Primer torneo de pesca femenil de Los Cabos",
+      venue: "IGY Marina (frente a Casa Country), Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=IGY+Marina+Cabo+San+Lucas",
+      price: "$$",
+      reservation: true,
+      why: "Historia local: el primer torneo de pesca exclusivo para mujeres en Los Cabos, con bolsa garantizada de $250,000 MXN y causa benéfica (El Carril Rosa, Boys & Girls Club BCS y OncoLoreto). $8,000 MXN por equipo de 4. Registro el viernes 10 de 2–8 PM en la marina; día de pesca el sábado. Ideal para Imelda y amigas — o para ir a ver el ambiente de la marina y la pesada.",
+      tags: [["especial","Primera edición"],["deporte","Pesca"]],
+      url: "https://www.visitloscabos.travel/event/cabo-queens-los-cabos-fishing-tournament/4117/"
+    },
+    {
+      priority: 2,
+      date: "Domingo 5 · 5:00–10:00 PM",
+      icon: "🍽️",
+      title: "Festival of Flavors — Última noche del chef Roberto Alcocer",
+      venue: "Don Manuel's, Waldorf Astoria Pedregal, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Waldorf+Astoria+Los+Cabos+Pedregal",
+      price: "$$$",
+      reservation: true,
+      why: "Hoy domingo cierra el fin de semana culinario del chef Roberto Alcocer —estrella Michelin con Valle (Oceanside) y Malva (Valle de Guadalupe)— en Don Manuel's del Waldorf Astoria Pedregal. Cocina mexicana moderna de Baja en formato íntimo. Última oportunidad, requiere reservación.",
+      tags: [["gastronomía","Chef Michelin"],["especial","Última noche"]],
+      url: "https://www.visitloscabos.travel/event/festival-of-flavors-with-chef-roberto-alcocer/4134/"
+    },
+    {
+      priority: 2,
+      date: "Miércoles 8 · 6:30 PM",
+      icon: "🤝",
+      title: "Dinner with Strangers by Ojos — Cena entre desconocidos",
+      venue: "GAMBA Café, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=GAMBA+Cafe+San+Jose+del+Cabo",
+      price: "$",
+      reservation: true,
+      why: "Concepto diferente a media semana: una cena comunitaria donde te sientas con gente que no conoces, en GAMBA Café en San José. Entrada libre con registro previo — solo pagas lo que consumas. Buen plan para conocer a la comunidad creativa local sin salir de San José.",
+      tags: [["social","Comunidad"],["gastronomía","Cena"]],
+      url: "https://www.eventbrite.com.mx/e/dinner-with-strangers-by-ojos-registration-1992370695383"
+    },
+    {
       priority: 3,
-      date: "Miércoles 1 · 7:30 PM",
+      date: "Martes 7 · Al atardecer",
+      icon: "🌙",
+      title: "Moon Zipping Fire — Tirolesas nocturnas + UTVs al atardecer",
+      venue: "Wild Canyon Adventure Park, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Wild+Canyon+Adventure+Park+Los+Cabos",
+      price: "$$",
+      reservation: true,
+      why: "Aventura fuera de la rutina: recorrido en UTV al atardecer por el Cañón del Diablo y después tirolesas de noche con antorchas de fuego. Con el calor de julio, hacer la adrenalina de noche es la jugada inteligente. Requiere reservación.",
+      tags: [["aventura","Nocturna"],["especial","Experiencia"]],
+      url: "https://www.visitloscabos.travel/event/moon-zipping-fire%3a-sunset-utvs-%2b-night-time-ziplines/2633/"
+    },
+    {
+      priority: 3,
+      date: "Miércoles 8 · 7:30 PM",
       icon: "🎷",
       title: "Daline Jones & The Diego Ramírez Trio — Jazz en vivo",
       venue: "Jazz on the Rocks, San José del Cabo",
