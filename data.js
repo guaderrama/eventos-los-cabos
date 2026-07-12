@@ -4,20 +4,21 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 5–11 Jul 2026",
-  weekDates:     "5 – 11 de Julio, 2026",
-  generatedDate: "5 de Julio, 2026",
+  weekLabel:     "Semana 12–18 Jul 2026",
+  weekDates:     "12 – 18 de Julio, 2026",
+  generatedDate: "12 de Julio, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 10", emoji:"🌧️", desc:"Lluvia ligera",         max:32, min:25, rain:32 },
-    { day:"Sáb 11", emoji:"🌧️", desc:"Lluvia ligera",         max:31, min:26, rain:45 },
-    { day:"Dom 5",  emoji:"🌤️", desc:"Mayormente despejado",  max:34, min:26, rain:0 },
-    { day:"Lun 6",  emoji:"🌤️", desc:"Mayormente despejado",  max:32, min:25, rain:0 }
+    { day:"Vie 17", emoji:"⛈️", desc:"Tormentas aisladas",     max:31, min:26, rain:45 },
+    { day:"Sáb 18", emoji:"⛈️", desc:"Tormentas aisladas",     max:33, min:25, rain:69 },
+    { day:"Dom 12", emoji:"☀️", desc:"Despejado",              max:34, min:25, rain:4 },
+    { day:"Lun 13", emoji:"☁️", desc:"Nublado",                max:35, min:27, rain:2 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 5–11 Jul",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 28 Jun–4 Jul",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
@@ -34,81 +35,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Jue 9 – Sáb 11 · Cuartos de Final",
-      icon: "⚽",
-      title: "Mundial 2026 — Semana decisiva: octavos y cuartos de final",
-      venue: "Palmilla Football Lounge, One&Only Palmilla, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=One+and+Only+Palmilla+San+Jose+del+Cabo",
-      price: "$$$",
+      date: "Jue 16 – Dom 19 · Todo el día",
+      icon: "💃",
+      title: "Al Son de Cabo Festival 2026 — 3ª edición (salsa, bachata y casino)",
+      venue: "Varias sedes, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Cabo+San+Lucas+Marina",
+      price: "$$",
       reservation: true,
-      why: "La semana más intensa del Mundial: los últimos octavos se juegan de domingo a martes y los cuartos de final de jueves a sábado (9, 10 y 11 de julio). El Palmilla Football Lounge transmite cada partido en pantalla grande frente al mar — el mejor lugar de Los Cabos para vivir la fase donde todo se define. Reserva con anticipación.",
-      tags: [["especial","Mundial 2026"],["deporte","Fútbol"]],
-      url: "https://www.visitloscabos.travel/event/palmilla-football-lounge/4144/"
+      why: "El festival de baile más grande de la región: talleres con instructores invitados, challenge, pool party, beach party, catamarán y concierto de cierre. Arranca jueves con 'Noche Mundialista' (camiseta de tu equipo). Es LA cosa distinta de esta semana — si van a hacer una sola salida, que sea esta.",
+      tags: [["especial","Festival"],["música","Baile"]],
+      url: "https://www.instagram.com/alsondecabobcs/"
     },
     {
       priority: 1,
-      date: "Sábado 11 · 7:00 AM–3:00 PM",
-      icon: "🎣",
-      title: "Cabo Queens — Primer torneo de pesca femenil de Los Cabos",
-      venue: "IGY Marina (frente a Casa Country), Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=IGY+Marina+Cabo+San+Lucas",
+      date: "Mar 14 y Mié 15 · Tarde-noche",
+      icon: "⚽",
+      title: "Mundial 2026 — Semifinales: Francia vs España y Argentina vs Inglaterra",
+      venue: "Palmilla Football Lounge, One&Only Palmilla / bares deportivos de Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=One%26Only+Palmilla+San+Jose+del+Cabo",
       price: "$$",
       reservation: true,
-      why: "Historia local: el primer torneo de pesca exclusivo para mujeres en Los Cabos, con bolsa garantizada de $250,000 MXN y causa benéfica (El Carril Rosa, Boys & Girls Club BCS y OncoLoreto). $8,000 MXN por equipo de 4. Registro el viernes 10 de 2–8 PM en la marina; día de pesca el sábado. Ideal para Imelda y amigas — o para ir a ver el ambiente de la marina y la pesada.",
-      tags: [["especial","Primera edición"],["deporte","Pesca"]],
-      url: "https://www.visitloscabos.travel/event/cabo-queens-los-cabos-fishing-tournament/4117/"
+      why: "Las dos semifinales del Mundial caen entre semana: Francia–España el martes en Dallas y Argentina–Inglaterra el miércoles en Atlanta. Toda la ciudad va a estar viéndolo; reserven mesa con anticipación porque los lounges se llenan.",
+      tags: [["deporte","Mundial 2026"],["especial","Cita única"]],
+      url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums"
     },
     {
       priority: 2,
-      date: "Domingo 5 · 5:00–10:00 PM",
-      icon: "🍽️",
-      title: "Festival of Flavors — Última noche del chef Roberto Alcocer",
-      venue: "Don Manuel's, Waldorf Astoria Pedregal, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Waldorf+Astoria+Los+Cabos+Pedregal",
-      price: "$$$",
-      reservation: true,
-      why: "Hoy domingo cierra el fin de semana culinario del chef Roberto Alcocer —estrella Michelin con Valle (Oceanside) y Malva (Valle de Guadalupe)— en Don Manuel's del Waldorf Astoria Pedregal. Cocina mexicana moderna de Baja en formato íntimo. Última oportunidad, requiere reservación.",
-      tags: [["gastronomía","Chef Michelin"],["especial","Última noche"]],
-      url: "https://www.visitloscabos.travel/event/festival-of-flavors-with-chef-roberto-alcocer/4134/"
-    },
-    {
-      priority: 2,
-      date: "Miércoles 8 · 6:30 PM",
-      icon: "🤝",
-      title: "Dinner with Strangers by Ojos — Cena entre desconocidos",
-      venue: "GAMBA Café, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=GAMBA+Cafe+San+Jose+del+Cabo",
-      price: "$",
-      reservation: true,
-      why: "Concepto diferente a media semana: una cena comunitaria donde te sientas con gente que no conoces, en GAMBA Café en San José. Entrada libre con registro previo — solo pagas lo que consumas. Buen plan para conocer a la comunidad creativa local sin salir de San José.",
-      tags: [["social","Comunidad"],["gastronomía","Cena"]],
-      url: "https://www.eventbrite.com.mx/e/dinner-with-strangers-by-ojos-registration-1992370695383"
-    },
-    {
-      priority: 3,
-      date: "Martes 7 · Al atardecer",
-      icon: "🌙",
-      title: "Moon Zipping Fire — Tirolesas nocturnas + UTVs al atardecer",
-      venue: "Wild Canyon Adventure Park, Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Wild+Canyon+Adventure+Park+Los+Cabos",
-      price: "$$",
-      reservation: true,
-      why: "Aventura fuera de la rutina: recorrido en UTV al atardecer por el Cañón del Diablo y después tirolesas de noche con antorchas de fuego. Con el calor de julio, hacer la adrenalina de noche es la jugada inteligente. Requiere reservación.",
-      tags: [["aventura","Nocturna"],["especial","Experiencia"]],
-      url: "https://www.visitloscabos.travel/event/moon-zipping-fire%3a-sunset-utvs-%2b-night-time-ziplines/2633/"
-    },
-    {
-      priority: 3,
-      date: "Miércoles 8 · 7:30 PM",
-      icon: "🎷",
-      title: "Daline Jones & The Diego Ramírez Trio — Jazz en vivo",
-      venue: "Jazz on the Rocks, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Jazz+on+the+Rocks+San+Jose+del+Cabo",
+      date: "Sábado 18 · Tarde",
+      icon: "🥉",
+      title: "Mundial 2026 — Partido por el tercer lugar",
+      venue: "Bares y lounges deportivos, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=sports+bar+Cabo+San+Lucas",
       price: "$$",
       reservation: false,
-      why: "Noche de jazz y soul con la vocalista Daline Jones acompañada del Diego Ramírez Trio en el clásico Jazz on the Rocks. Plan tranquilo y musical a media semana, en el corazón de San José. Llega temprano para buen lugar.",
-      tags: [["música","Jazz en vivo"],["cultura","Concierto"]],
-      url: "https://www.visitloscabos.travel/event/daline-jones-%26-the-diego-ram%C3%8Drez-trio/1943/"
+      why: "El aperitivo antes de la Final del domingo 19. Buen pretexto para un plan relajado de sábado por la tarde con cerveza y pantalla grande.",
+      tags: [["deporte","Mundial 2026"]],
+      url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums"
+    },
+    {
+      priority: 2,
+      date: "Sáb 18 – Dom 19 · 5:00 PM",
+      icon: "🌵",
+      title: "Fiestas de la Pitahaya — Miraflores",
+      venue: "Miraflores, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Miraflores+Los+Cabos+BCS",
+      price: "$",
+      reservation: false,
+      why: "Fiesta de pueblo de verdad: presentaciones artísticas, comida y la pitahaya de temporada. A ~45 min de San José. El plan más auténtico y barato de la semana — nada turístico.",
+      tags: [["cultura","Tradición"],["especial","Feria"]],
+      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
+    },
+    {
+      priority: 2,
+      date: "Sábado 18 · 6:00 y 8:00 PM (doble función)",
+      icon: "🎭",
+      title: "\"Mamá Cool\" — obra de teatro",
+      venue: "Teatro Prof. Alfredo Green González, Centro, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Teatro+Alfredo+Green+San+Jose+del+Cabo",
+      price: "$",
+      reservation: false,
+      why: "Teatro local con doble función en el centro de San José. Plan corto (2 h) y accesible, ideal si prefieren algo tranquilo antes o después de cenar en la zona.",
+      tags: [["cultura","Teatro"]],
+      url: "https://www.facebook.com/institutomunicipaldeculturaylasartesdeloscabos"
+    },
+    {
+      priority: 3,
+      date: "Todo el mes · Julio",
+      icon: "🎾",
+      title: "Los Cabos Tennis Open — 10º aniversario (arranca el 25 de julio)",
+      venue: "Cabo Sports Complex, Cabo Real, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Cabo+Sports+Complex+San+Jose+del+Cabo",
+      price: "$$",
+      reservation: true,
+      why: "No es de esta semana, pero los boletos de la edición aniversario se agotan. Si les interesa, este es el momento de comprarlos.",
+      tags: [["deporte","ATP"],["especial","Comprar con tiempo"]],
+      url: "https://loscabostennisopen.com/"
     }
   ],
 
