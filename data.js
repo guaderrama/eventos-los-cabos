@@ -4,26 +4,26 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 12–18 Jul 2026",
-  weekDates:     "12 – 18 de Julio, 2026",
-  generatedDate: "12 de Julio, 2026",
+  weekLabel:     "Semana 19–25 Jul 2026",
+  weekDates:     "19 – 25 de Julio, 2026",
+  generatedDate: "19 de Julio, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 17", emoji:"⛈️", desc:"Tormentas aisladas",     max:31, min:26, rain:45 },
-    { day:"Sáb 18", emoji:"⛈️", desc:"Tormentas aisladas",     max:33, min:25, rain:69 },
-    { day:"Dom 12", emoji:"☀️", desc:"Despejado",              max:34, min:25, rain:4 },
-    { day:"Lun 13", emoji:"☁️", desc:"Nublado",                max:35, min:27, rain:2 }
+    { day:"Vie 24", emoji:"☁️", desc:"Nublado",     max:35, min:27, rain:6 },
+    { day:"Sáb 25", emoji:"☁️", desc:"Nublado",     max:36, min:28, rain:12 },
+    { day:"Dom 19", emoji:"🌧️", desc:"Lluvia",      max:32, min:26, rain:53 },
+    { day:"Lun 20", emoji:"🌧️", desc:"Lluvia",      max:35, min:26, rain:92 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 12–18 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 5–11 Jul",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 28 Jun–4 Jul",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 31 May–6 Jun",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 24–30 May",     url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 31 May–6 Jun",  url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -35,81 +35,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Jue 16 – Dom 19 · Todo el día",
-      icon: "💃",
-      title: "Al Son de Cabo Festival 2026 — 3ª edición (salsa, bachata y casino)",
-      venue: "Varias sedes, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Cabo+San+Lucas+Marina",
+      date: "Hoy Dom 19 · 12:00 PM (hora Los Cabos)",
+      icon: "🏆",
+      title: "Final del Mundial 2026 — España vs Argentina",
+      venue: "Bares y lounges deportivos de Los Cabos (Palmilla Football Lounge, etc.)",
+      mapsUrl: "https://maps.google.com/?q=sports+bar+Cabo+San+Lucas",
       price: "$$",
       reservation: true,
-      why: "El festival de baile más grande de la región: talleres con instructores invitados, challenge, pool party, beach party, catamarán y concierto de cierre. Arranca jueves con 'Noche Mundialista' (camiseta de tu equipo). Es LA cosa distinta de esta semana — si van a hacer una sola salida, que sea esta.",
-      tags: [["especial","Festival"],["música","Baile"]],
-      url: "https://www.instagram.com/alsondecabobcs/"
+      why: "La final del primer Mundial de 48 selecciones: España, campeona de Europa, contra la Argentina de Messi, campeona defensora. Arranca al mediodía hora local (3 PM en Nueva Jersey). Toda la ciudad la va a ver — si van a un lounge, reserven porque se llenan.",
+      tags: [["deporte","Mundial 2026"],["especial","Cita única"]],
+      url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/final"
     },
     {
       priority: 1,
-      date: "Mar 14 y Mié 15 · Tarde-noche",
-      icon: "⚽",
-      title: "Mundial 2026 — Semifinales: Francia vs España y Argentina vs Inglaterra",
-      venue: "Palmilla Football Lounge, One&Only Palmilla / bares deportivos de Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=One%26Only+Palmilla+San+Jose+del+Cabo",
-      price: "$$",
-      reservation: true,
-      why: "Las dos semifinales del Mundial caen entre semana: Francia–España el martes en Dallas y Argentina–Inglaterra el miércoles en Atlanta. Toda la ciudad va a estar viéndolo; reserven mesa con anticipación porque los lounges se llenan.",
-      tags: [["deporte","Mundial 2026"],["especial","Cita única"]],
-      url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums"
-    },
-    {
-      priority: 2,
-      date: "Sábado 18 · Tarde",
-      icon: "🥉",
-      title: "Mundial 2026 — Partido por el tercer lugar",
-      venue: "Bares y lounges deportivos, Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=sports+bar+Cabo+San+Lucas",
-      price: "$$",
-      reservation: false,
-      why: "El aperitivo antes de la Final del domingo 19. Buen pretexto para un plan relajado de sábado por la tarde con cerveza y pantalla grande.",
-      tags: [["deporte","Mundial 2026"]],
-      url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums"
-    },
-    {
-      priority: 2,
-      date: "Sáb 18 – Dom 19 · 5:00 PM",
-      icon: "🌵",
-      title: "Fiestas de la Pitahaya — Miraflores",
-      venue: "Miraflores, Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Miraflores+Los+Cabos+BCS",
+      date: "Jue 23 – Sáb 25 · Tarde-noche",
+      icon: "🥭",
+      title: "Fiestas Tradicionales de Santiago 2026 — Feria del Mango",
+      venue: "Plaza Pública Gen. Francisco J. Múgica, Santiago",
+      mapsUrl: "https://maps.google.com/?q=Santiago+Los+Cabos+BCS",
       price: "$",
       reservation: false,
-      why: "Fiesta de pueblo de verdad: presentaciones artísticas, comida y la pitahaya de temporada. A ~45 min de San José. El plan más auténtico y barato de la semana — nada turístico.",
+      why: "El pueblo de Santiago celebra a su santo patrono (Santiago Apóstol, 25 de julio) con su feria del mango de temporada: presentaciones artísticas, concursos, muestra gastronómica y artesanías. A ~1 h de San José, es el plan más auténtico de la semana — nada turístico y muy barato.",
       tags: [["cultura","Tradición"],["especial","Feria"]],
       url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
     },
     {
       priority: 2,
-      date: "Sábado 18 · 6:00 y 8:00 PM (doble función)",
-      icon: "🎭",
-      title: "\"Mamá Cool\" — obra de teatro",
-      venue: "Teatro Prof. Alfredo Green González, Centro, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Teatro+Alfredo+Green+San+Jose+del+Cabo",
+      date: "Hoy Dom 19 · Desde 5:00 PM",
+      icon: "🌵",
+      title: "Clausura — Fiesta de la Pitaya, Miraflores (34ª edición)",
+      venue: "Miraflores, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Miraflores+Los+Cabos+BCS",
       price: "$",
       reservation: false,
-      why: "Teatro local con doble función en el centro de San José. Plan corto (2 h) y accesible, ideal si prefieren algo tranquilo antes o después de cenar en la zona.",
-      tags: [["cultura","Teatro"]],
-      url: "https://www.facebook.com/institutomunicipaldeculturaylasartesdeloscabos"
+      why: "Último día de la feria de la pitaya, la fruta de cactus de temporada: comida de pueblo, presentaciones y ambiente familiar. A ~45 min de San José. Si no fueron el fin de semana, hoy es la última oportunidad del año.",
+      tags: [["cultura","Tradición"],["especial","Feria"]],
+      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
     },
     {
-      priority: 3,
-      date: "Todo el mes · Julio",
+      priority: 2,
+      date: "Arranca Sáb 25 (qualy) · hasta 1 Ago",
       icon: "🎾",
-      title: "Los Cabos Tennis Open — 10º aniversario (arranca el 25 de julio)",
+      title: "Abierto de Los Cabos 2026 — 10º aniversario (ATP 250)",
       venue: "Cabo Sports Complex, Cabo Real, San José del Cabo",
       mapsUrl: "https://maps.google.com/?q=Cabo+Sports+Complex+San+Jose+del+Cabo",
       price: "$$",
       reservation: true,
-      why: "No es de esta semana, pero los boletos de la edición aniversario se agotan. Si les interesa, este es el momento de comprarlos.",
+      why: "El torneo ATP regresa en su edición aniversario. Este fin de semana arranca la fase de clasificación y el cuadro principal corre toda la próxima semana. Si quieren ir, compren boletos ya — la edición de los 10 años se agota.",
       tags: [["deporte","ATP"],["especial","Comprar con tiempo"]],
       url: "https://loscabostennisopen.com/"
+    },
+    {
+      priority: 2,
+      date: "Mar 21 · 5:00–9:00 PM",
+      icon: "🍤",
+      title: "Sabores San José — corredor gastronómico",
+      venue: "Centro histórico, San José del Cabo (Calle Grande, Morelos, Álvaro Obregón)",
+      mapsUrl: "https://maps.google.com/?q=Centro+Historico+San+Jose+del+Cabo",
+      price: "$$",
+      reservation: false,
+      why: "Cada martes el centro se cierra al tráfico y los restaurantes sacan menús especiales a precios accesibles, con música en vivo y baile folklórico. El mejor plan de entre semana para caminar, cenar rico y sentir el pueblo.",
+      tags: [["cultura","Gastronomía"]],
+      url: "https://www.visitloscabos.travel/places-to-visit/san-jose-del-cabo/saboressanjose/"
+    },
+    {
+      priority: 3,
+      date: "Hoy Dom 19 · Todo el día",
+      icon: "🎉",
+      title: "Fiestas Tradicionales de Santa Anita 2026",
+      venue: "Santa Anita, Los Cabos (zona del aeropuerto)",
+      mapsUrl: "https://maps.google.com/?q=Santa+Anita+Los+Cabos+BCS",
+      price: "$",
+      reservation: false,
+      why: "Fiesta patronal de este poblado cerca del aeropuerto: misa, comida, juegos mecánicos y baile. Plan corto y muy local si andan por la zona norte hoy.",
+      tags: [["cultura","Tradición"]],
+      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
     }
   ],
 
