@@ -4,26 +4,26 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 19–25 Jul 2026",
-  weekDates:     "19 – 25 de Julio, 2026",
-  generatedDate: "19 de Julio, 2026",
+  weekLabel:     "Semana 2–8 Ago 2026",
+  weekDates:     "2 – 8 de Agosto, 2026",
+  generatedDate: "5 de Agosto, 2026",
 
   /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 24", emoji:"☁️", desc:"Nublado",     max:35, min:27, rain:6 },
-    { day:"Sáb 25", emoji:"☁️", desc:"Nublado",     max:36, min:28, rain:12 },
-    { day:"Dom 19", emoji:"🌧️", desc:"Lluvia",      max:32, min:26, rain:53 },
-    { day:"Lun 20", emoji:"🌧️", desc:"Lluvia",      max:35, min:26, rain:92 }
+    { day:"Vie 7",  emoji:"🌦️", desc:"Llovizna",  max:36, min:27, rain:45 },
+    { day:"Sáb 8",  emoji:"🌦️", desc:"Llovizna",  max:35, min:28, rain:71 },
+    { day:"Dom 9",  emoji:"⛈️", desc:"Tormenta",  max:32, min:27, rain:96 },
+    { day:"Lun 10", emoji:"🌦️", desc:"Llovizna",  max:34, min:27, rain:92 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 19–25 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 12–18 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 5–11 Jul",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 28 Jun–4 Jul",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 31 May–6 Jun",  url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -35,81 +35,94 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Hoy Dom 19 · 12:00 PM (hora Los Cabos)",
-      icon: "🏆",
-      title: "Final del Mundial 2026 — España vs Argentina",
-      venue: "Bares y lounges deportivos de Los Cabos (Palmilla Football Lounge, etc.)",
-      mapsUrl: "https://maps.google.com/?q=sports+bar+Cabo+San+Lucas",
-      price: "$$",
-      reservation: true,
-      why: "La final del primer Mundial de 48 selecciones: España, campeona de Europa, contra la Argentina de Messi, campeona defensora. Arranca al mediodía hora local (3 PM en Nueva Jersey). Toda la ciudad la va a ver — si van a un lounge, reserven porque se llenan.",
-      tags: [["deporte","Mundial 2026"],["especial","Cita única"]],
-      url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/final"
+      date: "Sábado 8 · 6:00 PM",
+      icon: "💃",
+      title: "Baila la Plaza y Playa — Playa El Corsario",
+      venue: "Playa El Corsario, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Playa+El+Corsario+Cabo+San+Lucas",
+      price: "$",
+      reservation: false,
+      why: "Programa gratuito del Instituto de la Cultura y las Artes: clase abierta de baile en la playa con DJ Azteca. Entrada libre para todas las edades. Es la única sede en Cabo San Lucas de todo agosto — las otras fechas son San José y La Ribera. Ojo con el pronóstico: 71% de lluvia ese día.",
+      tags: [["cultura","Gratis"],["especial","Única en CSL"]],
+      url: "https://setuesbcs.gob.mx/eventos-admin/calendario.php?municipio=LOS+CABOS"
     },
     {
       priority: 1,
-      date: "Jue 23 – Sáb 25 · Tarde-noche",
-      icon: "🥭",
-      title: "Fiestas Tradicionales de Santiago 2026 — Feria del Mango",
-      venue: "Plaza Pública Gen. Francisco J. Múgica, Santiago",
-      mapsUrl: "https://maps.google.com/?q=Santiago+Los+Cabos+BCS",
+      date: "Sábado 8 · Todo el día",
+      icon: "🎉",
+      title: "Fiestas Tradicionales de Toro Muerto 2026",
+      venue: "Toro Muerto, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Toro+Muerto+Los+Cabos+BCS",
       price: "$",
       reservation: false,
-      why: "El pueblo de Santiago celebra a su santo patrono (Santiago Apóstol, 25 de julio) con su feria del mango de temporada: presentaciones artísticas, concursos, muestra gastronómica y artesanías. A ~1 h de San José, es el plan más auténtico de la semana — nada turístico y muy barato.",
-      tags: [["cultura","Tradición"],["especial","Feria"]],
-      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
+      why: "Fiesta patronal de un poblado serrano que se hace una sola vez al año: misa, comida regional, música y baile. Cero turismo, todo local. Si quieren el plan más auténtico de la semana, es este. Camino de terracería en partes — mejor con camioneta.",
+      tags: [["cultura","Tradición"],["especial","Anual"]],
+      url: "https://setuesbcs.gob.mx/eventos-admin/calendario.php?municipio=LOS+CABOS"
     },
     {
       priority: 2,
-      date: "Hoy Dom 19 · Desde 5:00 PM",
-      icon: "🌵",
-      title: "Clausura — Fiesta de la Pitaya, Miraflores (34ª edición)",
-      venue: "Miraflores, Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Miraflores+Los+Cabos+BCS",
+      date: "Vie 7 – Sáb 8 · Desde el amanecer",
+      icon: "🎣",
+      title: "Torneo de Pesca «Pescando Para Salvar Vidas»",
+      venue: "Playa Migriño, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Playa+Migri%C3%B1o+Los+Cabos",
       price: "$",
       reservation: false,
-      why: "Último día de la feria de la pitaya, la fruta de cactus de temporada: comida de pueblo, presentaciones y ambiente familiar. A ~45 min de San José. Si no fueron el fin de semana, hoy es la última oportunidad del año.",
-      tags: [["cultura","Tradición"],["especial","Feria"]],
-      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
+      why: "Torneo de pesca deportiva con causa, organizado con apoyo de Fonmar BCS. Aunque no compitan, vale ir a ver la pesada y el ambiente en Migriño — playa del lado Pacífico, muy distinta al Mar de Cortés.",
+      tags: [["deporte","Pesca"],["especial","Con causa"]],
+      url: "https://setuesbcs.gob.mx/eventos-admin/calendario.php?municipio=LOS+CABOS"
     },
     {
       priority: 2,
-      date: "Arranca Sáb 25 (qualy) · hasta 1 Ago",
-      icon: "🎾",
-      title: "Abierto de Los Cabos 2026 — 10º aniversario (ATP 250)",
-      venue: "Cabo Sports Complex, Cabo Real, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Cabo+Sports+Complex+San+Jose+del+Cabo",
-      price: "$$",
+      date: "Domingo 9 · Tarde",
+      icon: "🎧",
+      title: "Poolside Sessions — arranca temporada",
+      venue: "Hotel El Ganzo, La Playita, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Hotel+El+Ganzo+San+Jose+del+Cabo",
+      price: "$$$",
       reservation: true,
-      why: "El torneo ATP regresa en su edición aniversario. Este fin de semana arranca la fase de clasificación y el cuadro principal corre toda la próxima semana. Si quieren ir, compren boletos ya — la edición de los 10 años se agota.",
-      tags: [["deporte","ATP"],["especial","Comprar con tiempo"]],
-      url: "https://loscabostennisopen.com/"
+      why: "Primera fecha de la temporada 2026 (corre hasta el 27 de diciembre). DJ en vivo junto a la alberca del Ganzo, uno de los mejores atardeceres de San José. Reserven: la primera fecha siempre se llena.",
+      tags: [["música","DJ Set"],["especial","Arranca temporada"]],
+      url: "https://www.visitloscabos.travel/event/poolside-sessions/4298/"
     },
     {
       priority: 2,
-      date: "Mar 21 · 5:00–9:00 PM",
-      icon: "🍤",
-      title: "Sabores San José — corredor gastronómico",
-      venue: "Centro histórico, San José del Cabo (Calle Grande, Morelos, Álvaro Obregón)",
-      mapsUrl: "https://maps.google.com/?q=Centro+Historico+San+Jose+del+Cabo",
-      price: "$$",
-      reservation: false,
-      why: "Cada martes el centro se cierra al tráfico y los restaurantes sacan menús especiales a precios accesibles, con música en vivo y baile folklórico. El mejor plan de entre semana para caminar, cenar rico y sentir el pueblo.",
-      tags: [["cultura","Gastronomía"]],
-      url: "https://www.visitloscabos.travel/places-to-visit/san-jose-del-cabo/saboressanjose/"
+      date: "Viernes 7 · Noche",
+      icon: "🎶",
+      title: "El Ganzo Collective — arranca temporada",
+      venue: "Hotel El Ganzo, La Playita, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Hotel+El+Ganzo+San+Jose+del+Cabo",
+      price: "$$$",
+      reservation: true,
+      why: "Sesión de música en vivo con artistas residentes del estudio de grabación del hotel. Arranca este viernes y corre hasta el 25 de diciembre. Formato íntimo, muy distinto a los clubs de la Marina.",
+      tags: [["música","En vivo"],["especial","Arranca temporada"]],
+      url: "https://www.visitloscabos.travel/event/el-ganzo-collective/4301/"
     },
     {
       priority: 3,
-      date: "Hoy Dom 19 · Todo el día",
-      icon: "🎉",
-      title: "Fiestas Tradicionales de Santa Anita 2026",
-      venue: "Santa Anita, Los Cabos (zona del aeropuerto)",
-      mapsUrl: "https://maps.google.com/?q=Santa+Anita+Los+Cabos+BCS",
-      price: "$",
+      date: "Jueves 6 · Noche",
+      icon: "🎷",
+      title: "Blues Night con Eric Louis Trio — estreno",
+      venue: "Hotel El Ganzo, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Hotel+El+Ganzo+San+Jose+del+Cabo",
+      price: "$$",
       reservation: false,
-      why: "Fiesta patronal de este poblado cerca del aeropuerto: misa, comida, juegos mecánicos y baile. Plan corto y muy local si andan por la zona norte hoy.",
-      tags: [["cultura","Tradición"]],
-      url: "https://turismo.loscabos.gob.mx/calendario-de-eventos/"
+      why: "Estreno de la residencia de blues de los jueves en El Ganzo, que va hasta fin de año. Plan corto y tranquilo entre semana si no quieren esperar al fin de semana.",
+      tags: [["música","Blues"]],
+      url: "https://www.visitloscabos.travel/event/blues-night-w-eric-louis-trio/4295/"
+    },
+    {
+      priority: 3,
+      date: "Toda la semana · Cena",
+      icon: "🍽️",
+      title: "A Summer to Savor — Four Seasons Cabo Del Sol",
+      venue: "Palmerio y Cayao, Four Seasons Cabo Del Sol",
+      mapsUrl: "https://maps.google.com/?q=Four+Seasons+Resort+Cabo+Del+Sol",
+      price: "$$$",
+      reservation: true,
+      why: "Menú de tres tiempos a precio fijo, solo de agosto a septiembre, en los dos restaurantes del Four Seasons: Palmerio (italiano) y Cayao (nikkei del chef Richard Sandoval). Es la forma más barata de entrar a ese resort. Plan B perfecto si llueve el fin de semana.",
+      tags: [["gastronomía","Menú temporada"]],
+      url: "https://www.visitloscabos.travel/event/a-summer-to-savor-%7c-palmerio-at-four-seasons-cabo-del-sol/4398/"
     }
   ],
 
