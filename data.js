@@ -4,16 +4,16 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 16–22 Ago 2026",
-  weekDates:     "16 – 22 de Agosto, 2026",
-  generatedDate: "16 de Agosto, 2026",
+  weekLabel:     "Semana 23–29 Ago 2026",
+  weekDates:     "23 – 29 de Agosto, 2026",
+  generatedDate: "23 de Agosto, 2026",
 
-  /* ── CLIMA FIN DE SEMANA (Open-Meteo, actualizar cada semana) ── */
+  /* ── CLIMA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Vie 21", emoji:"☀️", desc:"Despejado",             max:37, min:28, rain:31 },
-    { day:"Sáb 22", emoji:"🌤️", desc:"Mayormente despejado", max:38, min:29, rain:43 },
-    { day:"Dom 23", emoji:"🌧️", desc:"Lluvia",                max:33, min:27, rain:63 },
-    { day:"Lun 24", emoji:"☁️", desc:"Nublado",                max:33, min:27, rain:63 }
+    { day:"Dom 23", emoji:"🌦️", desc:"Llovizna",  max:34, min:27, rain:65 },
+    { day:"Mié 26", emoji:"⛈️", desc:"Tormenta",  max:36, min:28, rain:88 },
+    { day:"Vie 28", emoji:"☁️", desc:"Nublado",   max:35, min:27, rain:22 },
+    { day:"Sáb 29", emoji:"🌦️", desc:"Llovizna",  max:34, min:28, rain:29 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
@@ -23,8 +23,7 @@ const WEEKLY_DATA = {
     { label:"Semana 12–18 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 5–11 Jul",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 28 Jun–4 Jul",  url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
-    { label:"Semana 7–13 Jun",      url:"https://guaderrama.github.io/eventos-los-cabos/" }
+    { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
   /* ══════════════════════════════════════════════════════════════════
@@ -36,55 +35,107 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Martes 18 · Todo el día",
+      date: "Sábado 29 · Gran Final",
       icon: "👑",
-      title: "Miss Universo México 2026 — Llegada y Cena de Bienvenida",
-      venue: "Corazón Cabo Resort & Spa, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Corazon+Cabo+Resort+Spa+Cabo+San+Lucas",
+      title: "Final Miss Universe México 2026",
+      venue: "Rancho Tierra Sagrada by Cabo Adventures, CSL",
+      mapsUrl: "https://maps.google.com/?q=Rancho+Tierra+Sagrada+Cabo+Adventures+Cabo+San+Lucas",
       price: "$$$",
       reservation: true,
-      why: "Llegan a Los Cabos las 32 delegadas para arrancar 11 días de actividades previas a la gran final del 29 de agosto. La cena de bienvenida es privada, pero el ambiente se siente toda la semana en el resort y en Rooftop 360° — si quieren ver algo del movimiento, cenar ahí esta semana es la apuesta más segura.",
-      tags: [["especial","Miss Universo"],["evento nacional","Cabo San Lucas"]],
-      url: "https://www.corazoncabo.com/miss-universe-mexico/"
+      why: "El evento más grande del año en Los Cabos: 32 delegadas, una por estado, y transmisión nacional. Ojo con la sede — Wikipedia, Milenio y El Heraldo dicen Rancho Tierra Sagrada, pero Corazón Cabo también se anuncia como sede. El desempate: el paquete del hotel ofrece 'transportación a la Gran Final', así que la final NO es en el hotel. Confirmen el domicilio al comprar el boleto.",
+      tags: [["especial","Único en el año"],["cultura","TV nacional"]],
+      url: "https://instatickets.mx/event/DDKAKSPX1RV5RZ"
     },
     {
       priority: 1,
-      date: "Domingo 16 · 6:00 PM",
-      icon: "💃",
-      title: "Baila la Plaza y Playa — cierre en La Ribera",
-      venue: "Plaza Pública, Delegación La Ribera",
-      mapsUrl: "https://maps.google.com/?q=La+Ribera+Los+Cabos+BCS",
+      date: "Viernes 28 · Hora por confirmar",
+      icon: "🍷",
+      title: "Beyond the Glass — Master class con Sébastien Pradal",
+      venue: "Al Pairo, Solaz, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Al+Pairo+Solaz+San+Jose+del+Cabo",
+      price: "$$$",
+      reservation: true,
+      why: "Pradal es sommelier francés y asesor de la serie 'Drops of God' de Apple TV+. No es un maridaje de menú fijo: es una master class de un solo día. El mejor plan de pareja de la semana. Hora y precio no están publicados — hay que llamar al (624) 144-2173.",
+      tags: [["gastronomía","Vino"],["especial","Una sola fecha"]],
+      url: "https://www.visitloscabos.travel/event/beyond-the-glass/4425/"
+    },
+    {
+      priority: 1,
+      date: "Charla Mié 26 · Galería hasta Vie 28",
+      icon: "🎨",
+      title: "\"Creativo Massivo Crac\" de Carlos Álvarez — últimos días",
+      venue: "Galería Cerrito del Timbre, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Casa+de+la+Cultura+Cerrito+del+Timbre+Cabo+San+Lucas",
       price: "$",
       reservation: false,
-      why: "Penúltima fecha del programa gratuito del Instituto de Cultura y las Artes: clase abierta de baile con DJ Azteca. Esta semana toca en La Ribera, la delegación menos turística de Los Cabos, sobre el Mar de Cortés rumbo al East Cape. Cierra la temporada el próximo domingo 23 en Playa Costa Azul, San José del Cabo.",
-      tags: [["cultura","Gratis"],["especial","La Ribera"]],
-      url: "https://www.loscabos.gob.mx/ica-los-cabos-pone-en-marcha-el-programa-cultural-baila-la-plaza/"
+      why: "Exposición individual irreverente presentada con CALX y Condesa Gin. Cierra el 28 de agosto, así que esta es la última semana para verla. El miércoles 26 hay charla gratuita con el artista. Galería abierta miércoles a sábado de 12 a 8 PM, entrada libre.",
+      tags: [["cultura","Gratis"],["especial","Cierra 28 ago"]],
+      url: "https://culturaloscabos.gob.mx/actividades/exposicion-creativo-massivo-crac-en-galeria-cerrito-del-timbre-cabo-san-lucas/"
     },
     {
       priority: 2,
-      date: "Domingo 16 · Brunch",
-      icon: "🥂",
-      title: "Sundaze Sessions Brunch — arranca temporada",
-      venue: "Hotel El Ganzo, La Playita, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Hotel+El+Ganzo+San+Jose+del+Cabo",
-      price: "$$$",
+      date: "Sábado 29 · 5:00–9:00 PM",
+      icon: "🐕",
+      title: "Acre Paws Fest",
+      venue: "Mango's Orchard, Acre Resort, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Acre+Resort+San+Jose+del+Cabo",
+      price: "$$",
       reservation: true,
-      why: "Primera fecha de la nueva serie de brunch dominical de El Ganzo, que corre hasta el 27 de diciembre. Se suma a Poolside Sessions y El Ganzo Collective, que arrancaron la semana pasada — el hotel entra en plena temporada de eventos. Reserven, los domingos ahí se llenan rápido.",
-      tags: [["gastronomía","Brunch"],["especial","Arranca temporada"]],
-      url: "https://www.visitloscabos.travel/event/sundaze-sessions-brunch/4293/"
+      why: "Festival anual pet-friendly en el huerto de mangos: Puppy Pilates, concurso de belleza canina, música en vivo, vendors de mascotas y estaciones de comida. Lo más relajado y distinto del sábado si no quieren el circo de Miss Universe. Reservar a restaurant@acreresort.com o (624) 172 1021.",
+      tags: [["cultura","Pet friendly"],["especial","Anual"]],
+      url: "https://www.visitloscabos.travel/event/acre-paws-fest/4396/"
+    },
+    {
+      priority: 2,
+      date: "Domingo 23 · 7:30 PM",
+      icon: "🎬",
+      title: "Cine Verano en tu Playa — función en la arena",
+      venue: "Playa El Corsario, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Playa+El+Corsario+Cabo+San+Lucas",
+      price: "$",
+      reservation: false,
+      why: "Cine al aire libre con los pies en la arena, del ICA Los Cabos con Cinema Vagabundo y FOCINE. Gratis, sin reserva, lleven manta y botana. Ojo: hoy hay 65% de probabilidad de lluvia — confirmen en redes del ICA antes de salir.",
+      tags: [["cultura","Gratis"],["especial","Hoy"]],
+      url: "https://culturaloscabos.gob.mx/actividades/cine-verano-en-tu-playa-funciones-gratuitas-en-los-cabos/"
+    },
+    {
+      priority: 2,
+      date: "Jueves 27 y Viernes 28 · Corazón Cabo",
+      icon: "✨",
+      title: "Miss Universe — Preliminar, traje de baño y White Dinner",
+      venue: "Corazón Cabo Resort & Rooftop 360°, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Corazon+Cabo+Resort+Spa+Cabo+San+Lucas",
+      price: "$$",
+      reservation: true,
+      why: "Si la Gran Final sale cara, los eventos satélite son la entrada barata al certamen: preliminar el jueves ($1,300), after party con meet & greet de las 32 delegadas ($700) y el viernes la competencia de traje de baño — la primera en la historia de Miss Universe México. Dress code total white en todos.",
+      tags: [["especial","Boletos"],["cultura","Dress code blanco"]],
+      url: "https://www.corazoncabo.com/miss-universe-mexico/"
     },
     {
       priority: 3,
-      date: "15 Ago – 30 Sep · Cena",
+      date: "Lunes 24 · Hora por confirmar",
+      icon: "⛪",
+      title: "305 Aniversario de la Misión de Santiago Apóstol",
+      venue: "Casa de la Cultura, Santiago, Los Cabos",
+      mapsUrl: "https://maps.google.com/?q=Casa+de+la+Cultura+Santiago+Los+Cabos+BCS",
+      price: "$",
+      reservation: false,
+      why: "'Fiesta del Intercambio y la Memoria' por los 305 años de la misión (1721–2026): presentaciones de libros, exposiciones y charlas históricas. Gratis, una vez al año, y el único plan de la semana en los pueblos de la sierra. Cero turismo.",
+      tags: [["cultura","Gratis"],["especial","Anual"]],
+      url: "https://culturaloscabos.gob.mx/actividades/celebracion-del-305-aniversario-de-la-mision-de-santiago-apostol-en-los-cabos/"
+    },
+    {
+      priority: 3,
+      date: "Toda la semana · Temporada",
       icon: "🌶️",
-      title: "Season of Chiles en Nogada — menú de temporada",
-      venue: "Pitahayas Restaurant, Pueblo Bonito Sunset Beach",
-      mapsUrl: "https://maps.google.com/?q=Pitahayas+Restaurant+Pueblo+Bonito+Sunset+Beach+Los+Cabos",
+      title: "Temporada de Chiles en Nogada — Chef José Lazcarro",
+      venue: "Pitahayas, Hacienda del Mar, Corredor Turístico",
+      mapsUrl: "https://maps.google.com/?q=Pitahayas+Hacienda+del+Mar+Los+Cabos",
       price: "$$$",
       reservation: true,
-      why: "Menú de tres tiempos dedicado al platillo más patriótico de México, en temporada corta porque depende de la nuez de Castilla y el chile poblano frescos (agosto-septiembre). Buena excusa para ir a Pitahayas, de los restaurantes con mejor vista al atardecer del corredor turístico.",
-      tags: [["gastronomía","Menú temporada"]],
-      url: "https://www.visitloscabos.travel/event/season-of-chiles-en-nogada%3a-3-course-menu/4427/"
+      why: "Menú de tres tiempos en $1,290 con copa de Santo Tomás. El chile en nogada solo existe en temporada y esta corre hasta el 30 de septiembre — si se les pasa, es hasta el año que viene.",
+      tags: [["gastronomía","Menú temporada"],["especial","Hasta 30 sep"]],
+      url: "https://activities.marriott.com/activity/XCWNYY"
     }
   ],
 
