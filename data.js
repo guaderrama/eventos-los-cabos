@@ -4,20 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 23–29 Ago 2026",
-  weekDates:     "23 – 29 de Agosto, 2026",
-  generatedDate: "23 de Agosto, 2026",
+  weekLabel:     "Semana 4–10 Oct 2026",
+  weekDates:     "4 – 10 de Octubre, 2026",
+  generatedDate: "5 de Octubre, 2026",
 
   /* ── CLIMA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Dom 23", emoji:"🌦️", desc:"Llovizna",  max:34, min:27, rain:65 },
-    { day:"Mié 26", emoji:"⛈️", desc:"Tormenta",  max:36, min:28, rain:88 },
-    { day:"Vie 28", emoji:"☁️", desc:"Nublado",   max:35, min:27, rain:22 },
-    { day:"Sáb 29", emoji:"🌦️", desc:"Llovizna",  max:34, min:28, rain:29 }
+    { day:"Lun 5",  emoji:"🌦️", desc:"Llovizna",             max:31, min:25, rain:77 },
+    { day:"Mar 6",  emoji:"🌦️", desc:"Llovizna",             max:31, min:25, rain:75 },
+    { day:"Mié 7",  emoji:"⛈️", desc:"Tormenta eléctrica",   max:32, min:25, rain:90 },
+    { day:"Jue 8",  emoji:"⛈️", desc:"Tormenta eléctrica",   max:33, min:27, rain:88 },
+    { day:"Vie 9",  emoji:"🌤️", desc:"Mayormente despejado", max:33, min:27, rain:58 },
+    { day:"Sáb 10", emoji:"🌦️", desc:"Llovizna",             max:32, min:26, rain:57 },
+    { day:"Dom 11", emoji:"☁️", desc:"Nublado",              max:31, min:26, rain:43 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 23–29 Ago",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 2–8 Ago",       url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 19–25 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 12–18 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
@@ -35,107 +39,81 @@ const WEEKLY_DATA = {
   specials: [
     {
       priority: 1,
-      date: "Sábado 29 · Gran Final",
-      icon: "👑",
-      title: "Final Miss Universe México 2026",
-      venue: "Rancho Tierra Sagrada by Cabo Adventures, CSL",
-      mapsUrl: "https://maps.google.com/?q=Rancho+Tierra+Sagrada+Cabo+Adventures+Cabo+San+Lucas",
-      price: "$$$",
-      reservation: true,
-      why: "El evento más grande del año en Los Cabos: 32 delegadas, una por estado, y transmisión nacional. Ojo con la sede — Wikipedia, Milenio y El Heraldo dicen Rancho Tierra Sagrada, pero Corazón Cabo también se anuncia como sede. El desempate: el paquete del hotel ofrece 'transportación a la Gran Final', así que la final NO es en el hotel. Confirmen el domicilio al comprar el boleto.",
-      tags: [["especial","Único en el año"],["cultura","TV nacional"]],
-      url: "https://instatickets.mx/event/DDKAKSPX1RV5RZ"
-    },
-    {
-      priority: 1,
-      date: "Viernes 28 · Hora por confirmar",
+      date: "Jue 8 – Sáb 10 · Chef's Table Sáb 6:30 PM",
       icon: "🍷",
-      title: "Beyond the Glass — Master class con Sébastien Pradal",
-      venue: "Al Pairo, Solaz, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Al+Pairo+Solaz+San+Jose+del+Cabo",
+      title: "Festival of Flavors con el chef Travis Swikard",
+      venue: "Don Manuel's, Waldorf Astoria Los Cabos Pedregal, CSL",
+      mapsUrl: "https://maps.google.com/?q=Waldorf+Astoria+Los+Cabos+Pedregal",
       price: "$$$",
       reservation: true,
-      why: "Pradal es sommelier francés y asesor de la serie 'Drops of God' de Apple TV+. No es un maridaje de menú fijo: es una master class de un solo día. El mejor plan de pareja de la semana. Hora y precio no están publicados — hay que llamar al (624) 144-2173.",
-      tags: [["gastronomía","Vino"],["especial","Una sola fecha"]],
-      url: "https://www.visitloscabos.travel/event/beyond-the-glass/4425/"
+      why: "Fin de semana gastronómico de una sola edición: Swikard (Callie, San Diego — Bib Gourmand Michelin, formado con Daniel Boulud) trae su cocina mediterránea «Cuisine du Soleil» a Pedregal. Lo mejor para pareja: el viernes 9 cata de Barolo de Fontanafredda con Fabio Bosio (4–5 PM) o la Chef's Table del sábado 10 (6:30 PM). Es en interiores, así que la lluvia no lo arruina. Precios no publicados: reservar en la página del hotel o al +52 624 163 4300.",
+      tags: [["especial","Una sola edición"],["","Gastronomía"]],
+      url: "https://www.waldorfastorialoscabospedregal.com/culinary/chef-travis-swikard-culinary-weekend/"
     },
     {
       priority: 1,
-      date: "Charla Mié 26 · Galería hasta Vie 28",
-      icon: "🎨",
-      title: "\"Creativo Massivo Crac\" de Carlos Álvarez — últimos días",
-      venue: "Galería Cerrito del Timbre, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Casa+de+la+Cultura+Cerrito+del+Timbre+Cabo+San+Lucas",
+      date: "Jue 8 – Sáb 10 · Programa completo en la liga",
+      icon: "🦅",
+      title: "2º Festival de las Aves Los Cabos",
+      venue: "Hotel Krystal Grand Los Cabos, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Krystal+Grand+Los+Cabos+San+Jose+del+Cabo",
       price: "$",
       reservation: false,
-      why: "Exposición individual irreverente presentada con CALX y Condesa Gin. Cierra el 28 de agosto, así que esta es la última semana para verla. El miércoles 26 hay charla gratuita con el artista. Galería abierta miércoles a sábado de 12 a 8 PM, entrada libre.",
-      tags: [["cultura","Gratis"],["especial","Cierra 28 ago"]],
-      url: "https://culturaloscabos.gob.mx/actividades/exposicion-creativo-massivo-crac-en-galeria-cerrito-del-timbre-cabo-san-lucas/"
+      why: "Gratis y abierto al público: tres días de charlas con investigadores de México, EE.UU., Brasil y Panamá, salidas de campo y talleres de jardines para polinizadores con plantas nativas. Para ustedes el plato fuerte es el panel «Miradas que conservan: arte y comunicación visual para la protección de las aves». La sede registrada incluye también el Cerrito del Timbre, así que revisen qué actividad es dónde.",
+      tags: [["free","Gratis"],["cultura","Naturaleza + arte"]],
+      url: "https://gringogazette.com/event/2nd-los-cabos-bird-festival-2026/"
     },
     {
       priority: 2,
-      date: "Sábado 29 · 5:00–9:00 PM",
-      icon: "🐕",
-      title: "Acre Paws Fest",
-      venue: "Mango's Orchard, Acre Resort, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Acre+Resort+San+Jose+del+Cabo",
-      price: "$$",
-      reservation: true,
-      why: "Festival anual pet-friendly en el huerto de mangos: Puppy Pilates, concurso de belleza canina, música en vivo, vendors de mascotas y estaciones de comida. Lo más relajado y distinto del sábado si no quieren el circo de Miss Universe. Reservar a restaurant@acreresort.com o (624) 172 1021.",
-      tags: [["cultura","Pet friendly"],["especial","Anual"]],
-      url: "https://www.visitloscabos.travel/event/acre-paws-fest/4396/"
+      date: "Mié 7 – Dom 11 · Pesca Jue 8 – Sáb 10",
+      icon: "🎣",
+      title: "Los Cabos Billfish Tournament — 28ª edición",
+      venue: "Marina Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Marina+Cabo+San+Lucas",
+      price: "$",
+      reservation: false,
+      why: "El torneo que abre la temporada de marlin, una semana antes de Bisbee's. Si no compiten, el plan es la marina por la tarde de jueves a sábado para ver regresar los barcos; el horario de pesajes no está publicado. Ojo: con tormenta eléctrica pronosticada miércoles y jueves, Capitanía de Puerto puede cerrar el puerto y mover los días de pesca.",
+      tags: [["especial","Temporada de marlin"]],
+      url: "https://www.marlinmag.com/tournaments/los-cabos-billfish-tournament"
     },
     {
-      priority: 2,
-      date: "Domingo 23 · 7:30 PM",
+      priority: 3,
+      date: "Martes 6 · 7:00–9:00 PM",
       icon: "🎬",
-      title: "Cine Verano en tu Playa — función en la arena",
-      venue: "Playa El Corsario, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Playa+El+Corsario+Cabo+San+Lucas",
+      title: "Cine en el jardín: «Chavela» en Todos Santos",
+      venue: "Librería El Tecolote, Todos Santos",
+      mapsUrl: "https://maps.google.com/?q=Libreria+El+Tecolote+Todos+Santos",
       price: "$",
-      reservation: false,
-      why: "Cine al aire libre con los pies en la arena, del ICA Los Cabos con Cinema Vagabundo y FOCINE. Gratis, sin reserva, lleven manta y botana. Ojo: hoy hay 65% de probabilidad de lluvia — confirmen en redes del ICA antes de salir.",
-      tags: [["cultura","Gratis"],["especial","Hoy"]],
-      url: "https://culturaloscabos.gob.mx/actividades/cine-verano-en-tu-playa-funciones-gratuitas-en-los-cabos/"
-    },
-    {
-      priority: 2,
-      date: "Jueves 27 y Viernes 28 · Corazón Cabo",
-      icon: "✨",
-      title: "Miss Universe — Preliminar, traje de baño y White Dinner",
-      venue: "Corazón Cabo Resort & Rooftop 360°, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Corazon+Cabo+Resort+Spa+Cabo+San+Lucas",
-      price: "$$",
       reservation: true,
-      why: "Si la Gran Final sale cara, los eventos satélite son la entrada barata al certamen: preliminar el jueves ($1,300), after party con meet & greet de las 32 delegadas ($700) y el viernes la competencia de traje de baño — la primera en la historia de Miss Universe México. Dress code total white en todos.",
-      tags: [["especial","Boletos"],["cultura","Dress code blanco"]],
-      url: "https://www.corazoncabo.com/miss-universe-mexico/"
+      why: "Proyección al aire libre de «Chavela» (sobre Chavela Vargas) en el jardín de la librería, con cena ligera opcional. Boleto $100 MXN en tecolotebookstore.com. Queda a una hora de Cabo: sirve como escapada de martes si lo combinan con cena en el pueblo. Hay 75% de probabilidad de llovizna, así que confirmen en el Facebook de la librería antes de manejar.",
+      tags: [["cultura","Cine"],["especial","Una función"]],
+      url: "https://gringogazette.com/event/garden-movie-night-chavela/"
     },
     {
       priority: 3,
-      date: "Lunes 24 · Hora por confirmar",
-      icon: "⛪",
-      title: "305 Aniversario de la Misión de Santiago Apóstol",
-      venue: "Casa de la Cultura, Santiago, Los Cabos",
-      mapsUrl: "https://maps.google.com/?q=Casa+de+la+Cultura+Santiago+Los+Cabos+BCS",
+      date: "Desde el 10 de octubre · Hora por confirmar",
+      icon: "🎞️",
+      title: "Cinema Pabellón — nuevo ciclo con la Cineteca Nacional",
+      venue: "Pabellón Cultural de la República, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Pabellon+Cultural+de+la+Republica+Cabo+San+Lucas",
       price: "$",
       reservation: false,
-      why: "'Fiesta del Intercambio y la Memoria' por los 305 años de la misión (1721–2026): presentaciones de libros, exposiciones y charlas históricas. Gratis, una vez al año, y el único plan de la semana en los pueblos de la sierra. Cero turismo.",
-      tags: [["cultura","Gratis"],["especial","Anual"]],
-      url: "https://culturaloscabos.gob.mx/actividades/celebracion-del-305-aniversario-de-la-mision-de-santiago-apostol-en-los-cabos/"
+      why: "El Pabellón Cultural acaba de reabrir tras su rehabilitación y estrena cartelera semanal con la Cineteca Nacional: cine de autor en CSL, algo que casi no hay. Detalle: el anuncio oficial dice «a partir del 10 de octubre, todos los viernes», pero el 10 cae en sábado. Película, hora y costo no están publicados; revisen las redes del Pabellón antes de ir.",
+      tags: [["cultura","Cineteca Nacional"],["especial","Estreno de ciclo"]],
+      url: "https://www.loscabos.gob.mx/realiza-instituto-de-la-cultura-y-las-artes-festival-agua-blanca-arte-para-todos-2026-y-reapertura-del-pabellon-cultural-de-la-republica/"
     },
     {
       priority: 3,
-      date: "Toda la semana · Temporada",
-      icon: "🌶️",
-      title: "Temporada de Chiles en Nogada — Chef José Lazcarro",
-      venue: "Pitahayas, Hacienda del Mar, Corredor Turístico",
-      mapsUrl: "https://maps.google.com/?q=Pitahayas+Hacienda+del+Mar+Los+Cabos",
-      price: "$$$",
-      reservation: true,
-      why: "Menú de tres tiempos en $1,290 con copa de Santo Tomás. El chile en nogada solo existe en temporada y esta corre hasta el 30 de septiembre — si se les pasa, es hasta el año que viene.",
-      tags: [["gastronomía","Menú temporada"],["especial","Hasta 30 sep"]],
-      url: "https://activities.marriott.com/activity/XCWNYY"
+      date: "Domingo 11 · 7:00 PM (adelanto)",
+      icon: "👑",
+      title: "Certamen Reina de las Fiestas Tradicionales CSL 2026",
+      venue: "Plaza Pública León Cota Collins, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Plaza+Publica+Leon+Cota+Collins+Cabo+San+Lucas",
+      price: "$",
+      reservation: false,
+      why: "Arranque de las fiestas patronales de San Lucas Evangelista: elección de la reina el domingo 11. Gratis y muy local, cero turismo. Lo que sigue: coronación el viernes 16 y la cabalgata tradicional el domingo 18 a las 3 PM. La cartelera de artistas todavía no se publica.",
+      tags: [["free","Gratis"],["cultura","Fiestas patronales"]],
+      url: "https://www.feriasenmexico.com.mx/fiestas-tradicionales-cabo-san-lucas/"
     }
   ],
 
