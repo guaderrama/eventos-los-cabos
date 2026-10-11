@@ -4,23 +4,24 @@
 const WEEKLY_DATA = {
 
   /* ── META ── */
-  weekLabel:     "Semana 4–10 Oct 2026",
-  weekDates:     "4 – 10 de Octubre, 2026",
-  generatedDate: "5 de Octubre, 2026",
+  weekLabel:     "Semana 11–17 Oct 2026",
+  weekDates:     "11 – 17 de Octubre, 2026",
+  generatedDate: "11 de Octubre, 2026",
 
   /* ── CLIMA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Lun 5",  emoji:"🌦️", desc:"Llovizna",             max:31, min:25, rain:77 },
-    { day:"Mar 6",  emoji:"🌦️", desc:"Llovizna",             max:31, min:25, rain:75 },
-    { day:"Mié 7",  emoji:"⛈️", desc:"Tormenta eléctrica",   max:32, min:25, rain:90 },
-    { day:"Jue 8",  emoji:"⛈️", desc:"Tormenta eléctrica",   max:33, min:27, rain:88 },
-    { day:"Vie 9",  emoji:"🌤️", desc:"Mayormente despejado", max:33, min:27, rain:58 },
-    { day:"Sáb 10", emoji:"🌦️", desc:"Llovizna",             max:32, min:26, rain:57 },
-    { day:"Dom 11", emoji:"☁️", desc:"Nublado",              max:31, min:26, rain:43 }
+    { day:"Dom 11", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:2 },
+    { day:"Lun 12", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:12 },
+    { day:"Mar 13", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:14 },
+    { day:"Mié 14", emoji:"🌧️", desc:"Llovizna ligera",      max:32, min:24, rain:12 },
+    { day:"Jue 15", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:28 },
+    { day:"Vie 16", emoji:"🌤️", desc:"Mayormente despejado", max:30, min:23, rain:8 },
+    { day:"Sáb 17", emoji:"☀️", desc:"Despejado",            max:29, min:22, rain:14 }
   ],
 
   /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 4–10 Oct",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 23–29 Ago",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 2–8 Ago",       url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 19–25 Jul",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
@@ -32,88 +33,59 @@ const WEEKLY_DATA = {
 
   /* ══════════════════════════════════════════════════════════════════
      SECCIÓN 1: EVENTOS ESPECIALES ESTA SEMANA
-     Cosas únicas que no se repiten. Máximo 6-8.
-     priority: 1=imperdible, 2=recomendado, 3=opcional
-     reservation: true si necesita reserva
   ══════════════════════════════════════════════════════════════════ */
   specials: [
     {
       priority: 1,
-      date: "Jue 8 – Sáb 10 · Chef's Table Sáb 6:30 PM",
-      icon: "🍷",
-      title: "Festival of Flavors con el chef Travis Swikard",
-      venue: "Don Manuel's, Waldorf Astoria Los Cabos Pedregal, CSL",
-      mapsUrl: "https://maps.google.com/?q=Waldorf+Astoria+Los+Cabos+Pedregal",
+      date: "Dom 11 y Mar 13 · Noche 2 y Noche 3",
+      icon: "🎸",
+      title: "Sammy Hagar's Birthday Bash — noches 2 y 3",
+      venue: "Cabo Wabo Cantina, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Cabo+Wabo+Cantina+Cabo+San+Lucas",
       price: "$$$",
       reservation: true,
-      why: "Fin de semana gastronómico de una sola edición: Swikard (Callie, San Diego — Bib Gourmand Michelin, formado con Daniel Boulud) trae su cocina mediterránea «Cuisine du Soleil» a Pedregal. Lo mejor para pareja: el viernes 9 cata de Barolo de Fontanafredda con Fabio Bosio (4–5 PM) o la Chef's Table del sábado 10 (6:30 PM). Es en interiores, así que la lluvia no lo arruina. Precios no publicados: reservar en la página del hotel o al +52 624 163 4300.",
-      tags: [["especial","Una sola edición"],["","Gastronomía"]],
-      url: "https://www.waldorfastorialoscabospedregal.com/culinary/chef-travis-swikard-culinary-weekend/"
-    },
-    {
-      priority: 1,
-      date: "Jue 8 – Sáb 10 · Programa completo en la liga",
-      icon: "🦅",
-      title: "2º Festival de las Aves Los Cabos",
-      venue: "Hotel Krystal Grand Los Cabos, San José del Cabo",
-      mapsUrl: "https://maps.google.com/?q=Krystal+Grand+Los+Cabos+San+Jose+del+Cabo",
-      price: "$",
-      reservation: false,
-      why: "Gratis y abierto al público: tres días de charlas con investigadores de México, EE.UU., Brasil y Panamá, salidas de campo y talleres de jardines para polinizadores con plantas nativas. Para ustedes el plato fuerte es el panel «Miradas que conservan: arte y comunicación visual para la protección de las aves». La sede registrada incluye también el Cerrito del Timbre, así que revisen qué actividad es dónde.",
-      tags: [["free","Gratis"],["cultura","Naturaleza + arte"]],
-      url: "https://gringogazette.com/event/2nd-los-cabos-bird-festival-2026/"
+      why: "El show anual más legendario de Cabo: Sammy Hagar y su banda en una cantina de ~600 personas, con invitados sorpresa (el año pasado hubo Belinda Carlisle, Jerry Cantrell y Chad Kroeger). Quedan solo estas dos fechas; la preventa se anunciaba como «última oportunidad» desde agosto, así que es probable que las entradas estén agotadas o solo en reventa. Confirmen disponibilidad en redrocker.com antes de planear.",
+      tags: [["especial","Una vez al año"],["","Rock en vivo"]],
+      url: "https://www.redrocker.com/"
     },
     {
       priority: 2,
-      date: "Mié 7 – Dom 11 · Pesca Jue 8 – Sáb 10",
+      date: "Mar 13 – Sáb 17 · Llegada de barcos por la tarde",
       icon: "🎣",
-      title: "Los Cabos Billfish Tournament — 28ª edición",
+      title: "Bisbee's Los Cabos Offshore",
       venue: "Marina Cabo San Lucas",
       mapsUrl: "https://maps.google.com/?q=Marina+Cabo+San+Lucas",
       price: "$",
       reservation: false,
-      why: "El torneo que abre la temporada de marlin, una semana antes de Bisbee's. Si no compiten, el plan es la marina por la tarde de jueves a sábado para ver regresar los barcos; el horario de pesajes no está publicado. Ojo: con tormenta eléctrica pronosticada miércoles y jueves, Capitanía de Puerto puede cerrar el puerto y mover los días de pesca.",
-      tags: [["especial","Temporada de marlin"]],
-      url: "https://www.marlinmag.com/tournaments/los-cabos-billfish-tournament"
+      why: "El torneo de pesca que precede al Black & Blue (20–24 Oct). Gratis para mirar: la marina se llena de ambiente a la hora del pesaje y las tardes de jueves a sábado son lo mejor. Con clima mayormente nublado y baja probabilidad de lluvia, no debería haber cierres de puerto. Horarios exactos de pesaje no publicados.",
+      tags: [["free","Gratis"],["especial","Temporada de marlin"]],
+      url: "https://www.bisbees.com/tournaments/bisbees-los-cabos-offshore"
     },
     {
-      priority: 3,
-      date: "Martes 6 · 7:00–9:00 PM",
-      icon: "🎬",
-      title: "Cine en el jardín: «Chavela» en Todos Santos",
-      venue: "Librería El Tecolote, Todos Santos",
-      mapsUrl: "https://maps.google.com/?q=Libreria+El+Tecolote+Todos+Santos",
+      priority: 2,
+      date: "Vie 16 · Coronación + Ingrid Contreras y Perdidos de Sinaloa · Sáb 17 · Banda MS",
+      icon: "🎪",
+      title: "Fiestas Tradicionales de Cabo San Lucas 2026 — arranque",
+      venue: "Teatro del Pueblo, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Teatro+del+Pueblo+Cabo+San+Lucas",
       price: "$",
-      reservation: true,
-      why: "Proyección al aire libre de «Chavela» (sobre Chavela Vargas) en el jardín de la librería, con cena ligera opcional. Boleto $100 MXN en tecolotebookstore.com. Queda a una hora de Cabo: sirve como escapada de martes si lo combinan con cena en el pueblo. Hay 75% de probabilidad de llovizna, así que confirmen en el Facebook de la librería antes de manejar.",
-      tags: [["cultura","Cine"],["especial","Una función"]],
-      url: "https://gringogazette.com/event/garden-movie-night-chavela/"
+      reservation: false,
+      why: "Arrancan las fiestas patronales de San Lucas Evangelista (16–20 Oct): coronación de la reina el viernes, Banda MS el sábado. Muy local, ambiente de feria con música regional. Lo que sigue la próxima semana: cabalgata el domingo 18 a las 3 PM y Alfredo Olivas esa noche. Horarios y costo de entrada no publicados en las fuentes: confirmen en el Facebook del Ayuntamiento de Los Cabos.",
+      tags: [["cultura","Fiestas patronales"],["especial","Banda MS"]],
+      url: "https://www.feriasenmexico.com.mx/fiestas-tradicionales-cabo-san-lucas/"
     },
     {
       priority: 3,
-      date: "Desde el 10 de octubre · Hora por confirmar",
+      date: "Vie 16 · Hora por confirmar",
       icon: "🎞️",
-      title: "Cinema Pabellón — nuevo ciclo con la Cineteca Nacional",
+      title: "Cinema Pabellón — ciclo Cineteca Nacional",
       venue: "Pabellón Cultural de la República, Cabo San Lucas",
       mapsUrl: "https://maps.google.com/?q=Pabellon+Cultural+de+la+Republica+Cabo+San+Lucas",
       price: "$",
       reservation: false,
-      why: "El Pabellón Cultural acaba de reabrir tras su rehabilitación y estrena cartelera semanal con la Cineteca Nacional: cine de autor en CSL, algo que casi no hay. Detalle: el anuncio oficial dice «a partir del 10 de octubre, todos los viernes», pero el 10 cae en sábado. Película, hora y costo no están publicados; revisen las redes del Pabellón antes de ir.",
-      tags: [["cultura","Cineteca Nacional"],["especial","Estreno de ciclo"]],
+      why: "Cine de autor semanal en la marina de CSL, con el Pabellón recién reabierto. Se anunció «todos los viernes» desde el 10 de octubre. Película, hora y costo no están publicados; revisen las redes del Pabellón. Plan tranquilo si buscan algo distinto a las fiestas.",
+      tags: [["cultura","Cineteca Nacional"],["free","Posiblemente gratis"]],
       url: "https://www.loscabos.gob.mx/realiza-instituto-de-la-cultura-y-las-artes-festival-agua-blanca-arte-para-todos-2026-y-reapertura-del-pabellon-cultural-de-la-republica/"
-    },
-    {
-      priority: 3,
-      date: "Domingo 11 · 7:00 PM (adelanto)",
-      icon: "👑",
-      title: "Certamen Reina de las Fiestas Tradicionales CSL 2026",
-      venue: "Plaza Pública León Cota Collins, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Plaza+Publica+Leon+Cota+Collins+Cabo+San+Lucas",
-      price: "$",
-      reservation: false,
-      why: "Arranque de las fiestas patronales de San Lucas Evangelista: elección de la reina el domingo 11. Gratis y muy local, cero turismo. Lo que sigue: coronación el viernes 16 y la cabalgata tradicional el domingo 18 a las 3 PM. La cartelera de artistas todavía no se publica.",
-      tags: [["free","Gratis"],["cultura","Fiestas patronales"]],
-      url: "https://www.feriasenmexico.com.mx/fiestas-tradicionales-cabo-san-lucas/"
     }
   ],
 
