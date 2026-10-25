@@ -3,24 +3,23 @@
 // ═══════════════════════════════════════════════════════════════════
 const WEEKLY_DATA = {
 
-  /* ── META ── */
-  weekLabel:     "Semana 11–17 Oct 2026",
-  weekDates:     "11 – 17 de Octubre, 2026",
-  generatedDate: "11 de Octubre, 2026",
+  weekLabel:     "Semana 25–31 Oct 2026",
+  weekDates:     "25 – 31 de Octubre, 2026",
+  generatedDate: "25 de Octubre, 2026",
 
-  /* ── CLIMA (Open-Meteo, actualizar cada semana) ── */
   weather: [
-    { day:"Dom 11", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:2 },
-    { day:"Lun 12", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:12 },
-    { day:"Mar 13", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:14 },
-    { day:"Mié 14", emoji:"🌧️", desc:"Llovizna ligera",      max:32, min:24, rain:12 },
-    { day:"Jue 15", emoji:"☁️", desc:"Nublado",              max:32, min:24, rain:28 },
-    { day:"Vie 16", emoji:"🌤️", desc:"Mayormente despejado", max:30, min:23, rain:8 },
-    { day:"Sáb 17", emoji:"☀️", desc:"Despejado",            max:29, min:22, rain:14 }
+    { day:"Dom 25", emoji:"🌤️", desc:"Mayormente despejado", max:32, min:24, rain:18 },
+    { day:"Lun 26", emoji:"⛈️", desc:"Chubascos", max:31, min:23, rain:61 },
+    { day:"Mar 27", emoji:"⛈️", desc:"Tormenta eléctrica", max:32, min:23, rain:94 },
+    { day:"Mié 28", emoji:"⛈️", desc:"Tormenta eléctrica", max:26, min:23, rain:91 },
+    { day:"Jue 29", emoji:"🌤️", desc:"Mayormente despejado", max:31, min:23, rain:59 },
+    { day:"Vie 30", emoji:"🌧️", desc:"Llovizna intensa", max:28, min:23, rain:51 },
+    { day:"Sáb 31", emoji:"🌦️", desc:"Llovizna ligera", max:30, min:23, rain:29 }
   ],
 
-  /* ── ARCHIVO — últimas semanas (agregar una entrada cada domingo) ── */
   archive: [
+    { label:"Semana 18–24 Oct",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
+    { label:"Semana 11–17 Oct",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 4–10 Oct",      url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 23–29 Ago",     url:"https://guaderrama.github.io/eventos-los-cabos/" },
     { label:"Semana 2–8 Ago",       url:"https://guaderrama.github.io/eventos-los-cabos/" },
@@ -31,70 +30,87 @@ const WEEKLY_DATA = {
     { label:"Semana 21–27 Jun",     url:"https://guaderrama.github.io/eventos-los-cabos/" }
   ],
 
-  /* ══════════════════════════════════════════════════════════════════
-     SECCIÓN 1: EVENTOS ESPECIALES ESTA SEMANA
-  ══════════════════════════════════════════════════════════════════ */
   specials: [
     {
       priority: 1,
-      date: "Dom 11 y Mar 13 · Noche 2 y Noche 3",
-      icon: "🎸",
-      title: "Sammy Hagar's Birthday Bash — noches 2 y 3",
-      venue: "Cabo Wabo Cantina, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Cabo+Wabo+Cantina+Cabo+San+Lucas",
+      date: "Sáb 31 · Noche de Halloween (continúa 1–2 Nov)",
+      icon: "🎃",
+      title: "Halloween & Weekend of the Dead en El Squid Roe",
+      venue: "El Squid Roe, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Squid+Roe+Cabo+San+Lucas",
+      price: "$$",
+      reservation: false,
+      why: "Tres noches de fiesta (31 Oct–2 Nov) con concurso de disfraces (premio de $1,000 USD el 31), música en vivo y decoración temática; participan en el desfile del 2 de Nov. Hora y cover no publicados. Llovizna ligera probable el sábado.",
+      tags: [["especial","Halloween"],["","Música en vivo"]],
+      url: "https://www.visitloscabos.travel/event/halloween-in-cabo/3614/"
+    },
+    {
+      priority: 1,
+      date: "Sáb 31 · Hora por confirmar",
+      icon: "👻",
+      title: "Halloween en The Rooftop — concurso de disfraces",
+      venue: "The Rooftop, The Cape, a Thompson Hotel",
+      mapsUrl: "https://maps.google.com/?q=The+Cape+Thompson+Hotel+Cabo+San+Lucas",
       price: "$$$",
       reservation: true,
-      why: "El show anual más legendario de Cabo: Sammy Hagar y su banda en una cantina de ~600 personas, con invitados sorpresa (el año pasado hubo Belinda Carlisle, Jerry Cantrell y Chad Kroeger). Quedan solo estas dos fechas; la preventa se anunciaba como «última oportunidad» desde agosto, así que es probable que las entradas estén agotadas o solo en reventa. Confirmen disponibilidad en redrocker.com antes de planear.",
-      tags: [["especial","Una vez al año"],["","Rock en vivo"]],
-      url: "https://www.redrocker.com/"
+      why: "Cocteles con vista y concurso de disfraces con premios para los 3 mejores. La opción más elegante de la noche de Halloween; reserven con anticipación. Hora y precio no publicados.",
+      tags: [["especial","Halloween"]],
+      url: "https://www.visitaloscabos.travel/blog-spanish/post/halloween-en-los-cabos-disfraces-fiestas-musica-y-comunidad/"
     },
     {
       priority: 2,
-      date: "Mar 13 – Sáb 17 · Llegada de barcos por la tarde",
-      icon: "🎣",
-      title: "Bisbee's Los Cabos Offshore",
-      venue: "Marina Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Marina+Cabo+San+Lucas",
+      date: "31 Oct – 3 Nov · Sin horario específico",
+      icon: "💀",
+      title: "Día de Muertos Los Cabos 2026",
+      venue: "Playa El Médano, Cabo San Lucas",
+      mapsUrl: "https://maps.google.com/?q=Playa+El+Medano+Cabo+San+Lucas",
       price: "$",
       reservation: false,
-      why: "El torneo de pesca que precede al Black & Blue (20–24 Oct). Gratis para mirar: la marina se llena de ambiente a la hora del pesaje y las tardes de jueves a sábado son lo mejor. Con clima mayormente nublado y baja probabilidad de lluvia, no debería haber cierres de puerto. Horarios exactos de pesaje no publicados.",
-      tags: [["free","Gratis"],["especial","Temporada de marlin"]],
-      url: "https://www.bisbees.com/tournaments/bisbees-los-cabos-offshore"
+      why: "Celebración cultural de varios días en El Médano (altares, ambiente tradicional); el desfile está anotado para el 2 de Nov. Programa y horarios por confirmar en Visit Los Cabos.",
+      tags: [["cultura","Tradición"],["free","Probablemente gratis"]],
+      url: "https://www.visitloscabos.travel/events/annual-events/day-of-the-dead"
     },
     {
       priority: 2,
-      date: "Vie 16 · Coronación + Ingrid Contreras y Perdidos de Sinaloa · Sáb 17 · Banda MS",
-      icon: "🎪",
-      title: "Fiestas Tradicionales de Cabo San Lucas 2026 — arranque",
-      venue: "Teatro del Pueblo, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Teatro+del+Pueblo+Cabo+San+Lucas",
-      price: "$",
+      date: "Mié 28 · Hora por confirmar",
+      icon: "🎷",
+      title: "Daline Jones & The Diego Ramírez Trio",
+      venue: "Jazz on the Rocks, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Jazz+on+the+Rocks+San+Jose+del+Cabo",
+      price: "$$",
       reservation: false,
-      why: "Arrancan las fiestas patronales de San Lucas Evangelista (16–20 Oct): coronación de la reina el viernes, Banda MS el sábado. Muy local, ambiente de feria con música regional. Lo que sigue la próxima semana: cabalgata el domingo 18 a las 3 PM y Alfredo Olivas esa noche. Horarios y costo de entrada no publicados en las fuentes: confirmen en el Facebook del Ayuntamiento de Los Cabos.",
-      tags: [["cultura","Fiestas patronales"],["especial","Banda MS"]],
-      url: "https://www.feriasenmexico.com.mx/fiestas-tradicionales-cabo-san-lucas/"
+      why: "Show especial de jazz en vivo, fuera del jazz de rutina del venue. Ojo: pronóstico de tormenta eléctrica (91%) ese día; ideal por ser plan bajo techo.",
+      tags: [["especial","Jazz"]],
+      url: "https://www.visitloscabos.travel/events/"
     },
     {
       priority: 3,
-      date: "Vie 16 · Hora por confirmar",
-      icon: "🎞️",
-      title: "Cinema Pabellón — ciclo Cineteca Nacional",
-      venue: "Pabellón Cultural de la República, Cabo San Lucas",
-      mapsUrl: "https://maps.google.com/?q=Pabellon+Cultural+de+la+Republica+Cabo+San+Lucas",
+      date: "Jue 29 · Hora por confirmar",
+      icon: "🎨",
+      title: "Música en vivo en Patricia Mendoza Art Gallery",
+      venue: "Patricia Mendoza Art Gallery, San José del Cabo",
+      mapsUrl: "https://maps.google.com/?q=Patricia+Mendoza+Art+Gallery+San+Jose+del+Cabo",
       price: "$",
       reservation: false,
-      why: "Cine de autor semanal en la marina de CSL, con el Pabellón recién reabierto. Se anunció «todos los viernes» desde el 10 de octubre. Película, hora y costo no están publicados; revisen las redes del Pabellón. Plan tranquilo si buscan algo distinto a las fiestas.",
-      tags: [["cultura","Cineteca Nacional"],["free","Posiblemente gratis"]],
-      url: "https://www.loscabos.gob.mx/realiza-instituto-de-la-cultura-y-las-artes-festival-agua-blanca-arte-para-todos-2026-y-reapertura-del-pabellon-cultural-de-la-republica/"
+      why: "Noche de arte y música en vivo; combina bien con una vuelta por el Art District. Hora y costo no publicados.",
+      tags: [["cultura","Arte"],["","Música en vivo"]],
+      url: "https://www.visitloscabos.travel/events/"
+    },
+    {
+      priority: 3,
+      date: "Mar 27 · Atardecer y noche",
+      icon: "🔥",
+      title: "Moon Zipping Fire: UTVs al atardecer + tirolesas nocturnas",
+      venue: "Wild Canyon Adventures",
+      mapsUrl: "https://maps.google.com/?q=Wild+Canyon+Adventures+Los+Cabos",
+      price: "$$$",
+      reservation: true,
+      why: "Aventura nocturna única de luna. Riesgo alto de cancelación: pronóstico de tormenta (94%) ese día; confirmen con el operador antes.",
+      tags: [["especial","Aventura"]],
+      url: "https://www.visitloscabos.travel/events/"
     }
   ],
 
-  /* ══════════════════════════════════════════════════════════════════
-     SECCIÓN 2: LUGARES FIJOS
-     Cambia poco — revisión mensual aprox.
-     price: "$" barato / "$$" moderado / "$$$" caro
-     reservation: true/false
-  ══════════════════════════════════════════════════════════════════ */
   venues: [
     {
       category: "🥂 Brunch",
